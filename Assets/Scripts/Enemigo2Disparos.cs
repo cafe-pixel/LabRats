@@ -8,7 +8,7 @@ public class Enemigo2Disparos : MonoBehaviour
     [Header("Bala")]
     public GameObject bulletPrefab;
     public Transform firePoint;         
-    public Vector2 bulletDirection = Vector2.right; 
+    public Vector3 bulletDirection = Vector3.forward; 
     
     [Header("Sonidos")]
     public AudioSource audioSource;
@@ -56,7 +56,7 @@ public class Enemigo2Disparos : MonoBehaviour
         }
     }
 
-    void DetectarJugador()
+    void DetectarJugador() //pasar de animacion idle a movimiento
     {
         if (player == null) return;
 
@@ -64,12 +64,12 @@ public class Enemigo2Disparos : MonoBehaviour
         playerDetected = dist <= detectionRange;
     }
 
-    void Disparar()
+    void Disparar()  //añadir animación
     {
         if (bulletPrefab == null || firePoint == null) return;
 
         GameObject bala = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        //bala.GetComponent<Bullet>().direction = bulletDirection;
+        bala.GetComponent<Bullet>().dir = bulletDirection;
         
         if (audioSource != null && sonidoDisparo != null)
         {
@@ -83,9 +83,9 @@ public class Enemigo2Disparos : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
     
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter(Collider collision)       //Función para recibir daño, cambiar etiqueta y parametros
     {
-        if (collision.gameObject.CompareTag("Espada"))
+        if (collision.gameObject.CompareTag("Espada"))  
         {
             vidaActual -= 5;
             if (audioSource != null && sonidoGolpe != null)
@@ -97,7 +97,7 @@ public class Enemigo2Disparos : MonoBehaviour
         }
     }
 
-    void Morir()
+    void Morir()   //función de morir, añadir animación de muerte
     {
         Debug.Log(gameObject.name + " ha muerto.");
         Destroy(gameObject); 

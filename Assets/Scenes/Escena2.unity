@@ -538,6 +538,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8930177474190965315, guid: 228d754ae04f57e43afb49582eb68e6c, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 926290291}
+    - target: {fileID: 8930177474190965315, guid: 228d754ae04f57e43afb49582eb68e6c, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 699467271421972353, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
@@ -563,15 +567,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 916183283897986014, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.142
+      value: 8.096
       objectReference: {fileID: 0}
     - target: {fileID: 916183283897986014, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.8
+      value: 1.693
       objectReference: {fileID: 0}
     - target: {fileID: 916183283897986014, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.507
+      value: -8.768
       objectReference: {fileID: 0}
     - target: {fileID: 916183283897986014, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
       propertyPath: m_LocalRotation.w
@@ -606,7 +610,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 699467271421972353, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
-      insertIndex: 2
+      insertIndex: 1
       addedObject: {fileID: 8984296378780056948}
   m_SourcePrefab: {fileID: 100100000, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
 --- !u!1 &8984296378780056947 stripped
@@ -623,9 +627,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8984296378780056947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2331640033dadb42ac3d76878c076a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bfbe122884c3214fbda3291902b3e55, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Bala
+  m_EditorClassIdentifier: Assembly-CSharp::Bullet
+  life: 3
+  velocity: 7
+  damage: 2
+  dir: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
