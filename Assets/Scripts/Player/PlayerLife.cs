@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerLife : MonoBehaviour, IDamagable
 {
     [SerializeField] private float lifeCounter;
+    [SerializeField] private HealthBar healthBar;
     private PlayerMovement move;
 
     private void Awake()
