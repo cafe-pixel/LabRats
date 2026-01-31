@@ -87,4 +87,10 @@ public class PlayerMovement : MonoBehaviour
             canJump = false;
         }
     }
+
+    public void Knockback(Vector3 knockDirection, float damage)
+    {
+        rb.isKinematic = false;
+        rb.AddForce(knockDirection * damage, ForceMode.Impulse);
+    }
 }
