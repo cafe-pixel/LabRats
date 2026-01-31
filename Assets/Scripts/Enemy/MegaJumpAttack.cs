@@ -5,7 +5,9 @@ public class MegaJumpAttack : EnemyAttack
     protected override float Cooldown { get; }
     protected override void DoAttack()
     {
-        //toma al player y salta sobre él
+        //solo embiste y le aplica un knockback al jugador
+        
+        
     }
     
     //el player lo tienes por ahí

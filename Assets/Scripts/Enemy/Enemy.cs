@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour, IDamagable
     {
 
         rb = GetComponent<Rigidbody>();
-       
+        rb.isKinematic = true;
         attackTimer = maxAttackTimer;
 
         
@@ -108,6 +108,18 @@ public class Enemy : MonoBehaviour, IDamagable
         return false;
     }
     
+    private bool PlayerInAttackRange()
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, AttackRange, playerLayer);
+        if (colliders.Length > 0)
+        {
+            player =  colliders[0].transform;
+            return true;
+        }
+      
+        return false;
+    }
+    
     private void Chase()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.position, velocity * Time.deltaTime);
@@ -115,10 +127,17 @@ public class Enemy : MonoBehaviour, IDamagable
     }
 
     //lo de ser atacable
-    public void MakeDamage(float damage)
+    public void MakeDamage(float damage, GameObject damagedealer)
     {
         lifeCounter--;
+        Vector3 knockDirection = this.transform.position - damagedealer.transform.position;
+        Knockback(knockDirection,damage);
         if (lifeCounter == 0) Destroy(gameObject);
     }
-    
+
+    private void Knockback(Vector3 knockDirection, float damage)
+    {
+        rb.isKinematic = false;
+        rb.AddForce(knockDirection * damage, ForceMode.Impulse);
+    }
 }
