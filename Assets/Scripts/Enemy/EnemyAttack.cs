@@ -4,13 +4,16 @@ public abstract class EnemyAttack : MonoBehaviour
 {
     protected abstract float Cooldown { get; }
 
-    private Transform player;
-
+    protected Transform player;
+    protected Rigidbody rb;
+    
+    [SerializeField] protected float damage;
     public float lastAttackTime; //momento en el que el enemigo hizo su último ataque
 
     protected virtual void Start()
     {
         if (!player) player = GameObject.FindGameObjectWithTag("Player").transform;
+        rb = GetComponent<Rigidbody>();
     }
 
     public void TryAttack()

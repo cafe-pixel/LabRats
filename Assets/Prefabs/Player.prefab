@@ -808,7 +808,7 @@ GameObject:
   - component: {fileID: 7131433647617944951}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -843,8 +843,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   jump: 32
   movementForce: 10
-  gravity: 20
-  jumpForce: 25
+  gravity: 200
+  jumpForce: 80
   doubleJumpTimerMax: 12
 --- !u!114 &5659183398872584247
 MonoBehaviour:

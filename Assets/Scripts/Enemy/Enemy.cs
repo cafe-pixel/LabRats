@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour, IDamagable
     [SerializeField] private LayerMask playerLayer; //poner el jugador en la layer del jugador
    
     //referencias
-    private Transform player;
-    private Rigidbody rb;
+    protected Transform player;
+    protected Rigidbody rb;
     [SerializeField] private EnemyAttack enemyAttack;
     
     
@@ -36,11 +36,6 @@ public class Enemy : MonoBehaviour, IDamagable
 
         
     }
-    
-    
-    //lo del sphere collider
-    
-    
     
     //necesito gizmos para verlo
     private void OnDrawGizmos()
