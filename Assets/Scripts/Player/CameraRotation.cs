@@ -19,6 +19,10 @@ public class CameraRotation : MonoBehaviour
 
     private void Update()
     {
+        float yTo = Mathf.Lerp(transform.position.y, playerBody.position.y, 5*Time.deltaTime);
+
+        this.transform.position = new Vector3(playerBody.position.x, yTo, playerBody.position.z);
+            
         float mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivite * Time.deltaTime;
         float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivite * Time.deltaTime;
 
@@ -26,9 +30,11 @@ public class CameraRotation : MonoBehaviour
             mouseY; //restas lo que se movio el raton en y a la rotacion de arriba y abajo. Debe permitir que al mirar arriba la camara se ponga mas negativa y viceversa
         xRotation = Math.Clamp(xRotation, -90f, 90f); //evita que camara gire mas de 90º
         
-        transform.localRotation = Quaternion.Euler(xRotation, 0, 0); //rotas sobre eje y
         
         playerBody.Rotate(Vector3.up * mouseX); //mueve en "YRotation" el movimiento horizontal
+        transform.Rotate(Vector3.up * mouseX); //mueve en "YRotation" el movimiento horizontal
+
+        transform.localRotation = Quaternion.Euler(xRotation, this.transform.localEulerAngles.y, 0); //rotas sobre eje y
     }
 
     private void FixedUpdate()
