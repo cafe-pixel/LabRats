@@ -22,7 +22,7 @@ public class PlayerLife : MonoBehaviour, IDamagable
     public void MakeDamage(float damage, GameObject damagedealer)
     {
         lifeCounter -= damage;
-        healthBarScript.RecibirDanoDeEnemigo();
+        healthBarScript.UpdatearVida(lifeCounter, lifeCounterMax);
         Vector3 knockDirection = this.transform.position - damagedealer.transform.position;
         move.Knockback(knockDirection,damage);
         if (lifeCounter <= 0)
