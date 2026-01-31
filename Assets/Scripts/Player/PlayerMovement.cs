@@ -28,10 +28,21 @@ public class PlayerMovement : MonoBehaviour
     
     //can
     private bool canJump = false;
+    
+    
+    //doble salto
+    [SerializeField] private float doubleJumpTimerMax;
+    private float doubleJumpTimer;
+    
+    //bool
+    private bool canMakeDoubleJump = false;
+    private int counterScene;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        doubleJumpTimer = doubleJumpTimerMax;
+        canJump = true;
     }
 
     private void Update()
@@ -42,7 +53,16 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-
+        
+        if (doubleJumpTimer > 0 && !canJump && canMakeDoubleJump)
+        {
+            doubleJumpTimer -= Time.deltaTime;
+            if (doubleJumpTimer <= 0)
+            {
+                canJump = false;
+            }
+                
+        }
         
         
     }
@@ -77,6 +97,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Path"))
         {
             canJump = true;
+            doubleJumpTimer = doubleJumpTimerMax;
         }
     }
 
@@ -86,5 +107,17 @@ public class PlayerMovement : MonoBehaviour
         {
             canJump = false;
         }
+    }
+
+    public void Knockback(Vector3 knockDirection, float damage)
+    {
+        rb.isKinematic = false;
+        rb.AddForce(knockDirection * damage, ForceMode.Impulse);
+    }
+
+    public void CounterScene()
+    {
+        counterScene++;
+        if (counterScene == 2) canMakeDoubleJump = true;
     }
 }

@@ -46,6 +46,10 @@ public class Enemigo2Disparos : MonoBehaviour
 
         if (playerDetected)
         {
+            Vector3 lookDir = player.position - transform.position;
+            lookDir.y = 0;
+            transform.rotation = Quaternion.LookRotation(lookDir);
+            
             fireTimer -= Time.deltaTime;
 
             if (fireTimer <= 0f)
@@ -60,22 +64,35 @@ public class Enemigo2Disparos : MonoBehaviour
     {
         if (player == null) return;
 
-        float dist = Vector2.Distance(transform.position, player.position);
+        float dist = Vector3.Distance(transform.position, player.position);
         playerDetected = dist <= detectionRange;
     }
 
     void Disparar()  //añadir animación
     {
-        if (bulletPrefab == null || firePoint == null) return;
-
-        GameObject bala = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
-        bala.GetComponent<Bullet>().dir = bulletDirection;
+        if (bulletPrefab == null || firePoint == null || player == null) return;
         
+        
+        Vector3 direccion = (player.position - firePoint.position).normalized;
+
+
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(direccion));
+        
+        
+        BulletEnemigo bulletScript = bullet.GetComponent<BulletEnemigo>();
+        if (bulletScript != null)
+        {
+            bulletScript.dir = direccion;
+        }
+
+        //audio
         if (audioSource != null && sonidoDisparo != null)
         {
             audioSource.PlayOneShot(sonidoDisparo);
         }
+        
     }
+    
 
     void OnDrawGizmosSelected()
     {
