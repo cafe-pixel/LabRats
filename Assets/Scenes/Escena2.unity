@@ -444,6 +444,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 626407089923051610, guid: c2ef21811cc77974d815d875c607a511, type: 3}
+      propertyPath: movementForce
+      value: 0.75
+      objectReference: {fileID: 0}
     - target: {fileID: 3717431600070447424, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.921189
@@ -484,6 +488,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7116227174086653691, guid: c2ef21811cc77974d815d875c607a511, type: 3}
+      propertyPath: m_LinearDamping
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7953830401975391233, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_Name
       value: NewPlayer
@@ -509,6 +517,10 @@ PrefabInstance:
     - target: {fileID: 3381999477261023120, guid: 228d754ae04f57e43afb49582eb68e6c, type: 3}
       propertyPath: m_Name
       value: EnemigoQueDispara
+      objectReference: {fileID: 0}
+    - target: {fileID: 3487848736896493809, guid: 228d754ae04f57e43afb49582eb68e6c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4254508006934384112, guid: 228d754ae04f57e43afb49582eb68e6c, type: 3}
       propertyPath: m_LocalScale.x
