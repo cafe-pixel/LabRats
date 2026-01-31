@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour, IDamagable
     [SerializeField] private LayerMask playerLayer; //poner el jugador en la layer del jugador
    
     //referencias
-    protected Transform player;
+    private Transform player;
     protected Rigidbody rb;
     [SerializeField] private EnemyAttack enemyAttack;
     
@@ -29,11 +29,11 @@ public class Enemy : MonoBehaviour, IDamagable
     
     protected virtual void Start()
     {
-
+        
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = true;
         attackTimer = maxAttackTimer;
-
+        
         
     }
     
@@ -50,7 +50,7 @@ public class Enemy : MonoBehaviour, IDamagable
     private void Update() //update ejecuta cada frame, NO USAR WHILE
     {
 
-
+        
 
         bool inChase = PlayerInChaseRange();
         bool inAttack = PlayerInAttackRange();
@@ -95,7 +95,7 @@ public class Enemy : MonoBehaviour, IDamagable
 
     private bool PlayerInChaseRange()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, ChaseRange, playerLayer); 
+        Collider[] colliders = Physics.OverlapSphere(transform.position, ChaseRange, playerLayer); 
         if (colliders.Length > 0) //si el array de colliders es mayor que cero porque el overlapSphere detecta colision en una posicion dentro del radio y de la layer indicada
         {
             player =  colliders[0].transform; //toma el transform del collider que ha recogido y lo mete en el player
@@ -108,7 +108,7 @@ public class Enemy : MonoBehaviour, IDamagable
     
     private bool PlayerInAttackRange()
     {
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, AttackRange, playerLayer);
+        Collider[] colliders = Physics.OverlapSphere(transform.position, AttackRange, playerLayer);
         if (colliders.Length > 0)
         {
             player =  colliders[0].transform;
@@ -121,9 +121,7 @@ public class Enemy : MonoBehaviour, IDamagable
     private void Chase()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.position, velocity * Time.deltaTime);
-        Vector3 lookDir = player.position - transform.position;
-        lookDir.y = 0;
-        transform.rotation = Quaternion.LookRotation(lookDir);
+        
         //esto hay que probarlo en 3d
     }
 

@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class LargeDistanceEnemyAttack : EnemyAttack
 {
-    [Header("Rango y disparo")]
-    public float detectionRange = 4f; //rango de ataque desde los enemies
     
     public float fireRate = 5f;         
     [Header("Bala")]
@@ -51,9 +49,7 @@ public class LargeDistanceEnemyAttack : EnemyAttack
 
     void Update()
     {
-        DetectarJugador();
-
-        if (playerDetected)
+        if (player)
         {
             Vector3 lookDir = player.position - transform.position;
             lookDir.y = 0;
@@ -63,13 +59,6 @@ public class LargeDistanceEnemyAttack : EnemyAttack
         }
     }
 
-    void DetectarJugador() //pasar de animacion idle a movimiento
-    {
-        if (player == null) return;
-
-        float dist = Vector3.Distance(transform.position, player.position);
-        playerDetected = dist <= detectionRange;
-    }
 
     void Disparar()  //añadir animación
     {
@@ -88,38 +77,17 @@ public class LargeDistanceEnemyAttack : EnemyAttack
             bulletScript.dir = direccion;
         }
 
-        //audio
-        if (audioSource != null && sonidoDisparo != null)
-        {
-            audioSource.PlayOneShot(sonidoDisparo);
-        }
         
     }
     
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, detectionRange);
-    }
     
-    void OnTriggerEnter(Collider collision)       //Función para recibir daño, cambiar etiqueta y parametros
+    void OnTriggerEnter(Collider other)       //Función para recibir daño, cambiar etiqueta y parametros
     {
-        if (collision.gameObject.CompareTag("Espada"))  
+        if (other.TryGetComponent<IDamagable>(out IDamagable player) && other.CompareTag("Player"))
         {
-            vidaActual -= 5;
-            if (audioSource != null && sonidoGolpe != null)
-                audioSource.PlayOneShot(sonidoGolpe);
-            if (vidaActual <= 0)
-            {
-                Morir();
-            }
+            player.MakeDamage(damage,this.gameObject);
         }
     }
 
-    void Morir()   //función de morir, añadir animación de muerte
-    {
-        Debug.Log(gameObject.name + " ha muerto.");
-        Destroy(gameObject); 
-    }
+   
 }
