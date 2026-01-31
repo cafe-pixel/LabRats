@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour 
 {
@@ -40,6 +41,12 @@ public class PauseMenu : MonoBehaviour
         
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+    }
+    
+    public void BackMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }
 
