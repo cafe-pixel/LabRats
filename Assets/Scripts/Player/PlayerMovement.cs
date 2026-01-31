@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     
     //can
     public bool canJump { get; set; }= false;
+    private bool doubleJump;
     private bool applyGrav = false;    
     
     
@@ -53,7 +54,18 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
+        
+        if (Input.GetKeyDown(jump) && !canJump && doubleJump)
+        {
+            DoubleJump();
+        }
 
+    }
+
+    private void DoubleJump()
+    {
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        doubleJump = false;
     }
 
     private void FixedUpdate()
@@ -80,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Realizo un salto");
         canJump = false;
+        doubleJump = true;
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
     
