@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class PlayerLife : MonoBehaviour, IDamagable
 {
-    [SerializeField] private float lifeCounter;
+    [SerializeField] private float lifeCounterMax;
+    private float lifeCounter;
     //[SerializeField] private HealthBar healthBar;
     private PlayerMovement move;
     
@@ -12,7 +13,8 @@ public class PlayerLife : MonoBehaviour, IDamagable
     private void Awake()
     {
         move = GetComponent<PlayerMovement>();
-        
+        lifeCounter = lifeCounterMax;
+
     }
     
     public void MakeDamage(float damage, GameObject damagedealer)
@@ -30,6 +32,12 @@ public class PlayerLife : MonoBehaviour, IDamagable
         {
             MakeDamage(10, gameObject);
         }
+    }
+
+    public void GiveYouLife(float life)
+    {
+        lifeCounter += life;
+        if (lifeCounter > lifeCounterMax) lifeCounter = lifeCounterMax;
     }
 
     
