@@ -33,6 +33,10 @@ public class PlayerMovement : MonoBehaviour
     //doble salto
     [SerializeField] private float doubleJumpTimerMax;
     private float doubleJumpTimer;
+    
+    //bool
+    private bool canMakeDoubleJump = false;
+    private int counterScene;
 
     private void Awake()
     {
@@ -49,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
         
-        if (doubleJumpTimer > 0 && !canJump)
+        if (doubleJumpTimer > 0 && !canJump && canMakeDoubleJump)
         {
             doubleJumpTimer -= Time.deltaTime;
             if (doubleJumpTimer <= 0)
@@ -108,5 +112,11 @@ public class PlayerMovement : MonoBehaviour
     {
         rb.isKinematic = false;
         rb.AddForce(knockDirection * damage, ForceMode.Impulse);
+    }
+
+    public void CounterScene()
+    {
+        counterScene++;
+        if (counterScene == 2) canMakeDoubleJump = true;
     }
 }

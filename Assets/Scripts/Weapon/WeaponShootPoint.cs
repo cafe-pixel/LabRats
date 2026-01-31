@@ -9,6 +9,8 @@ public class WeaponShootPoint : MonoBehaviour
     [SerializeField] private CameraRotation playerCamera;
 
     [SerializeField] private int shootKey = 0;
+
+    private bool canShoot = false;
     //necesito una pistola, una bala, un lugar donde instanciarla y luego de ahí darle fuerza
 
 
@@ -16,7 +18,7 @@ public class WeaponShootPoint : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(shootKey) && Time.time >= newShoot)
+        if (Input.GetMouseButtonDown(shootKey) && Time.time >= newShoot && canShoot)
         {
             Shoot();
             newShoot = cooldown + Time.time;
