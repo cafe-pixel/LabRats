@@ -6,8 +6,7 @@ public class HealthBar : MonoBehaviour
     public float vidaActual;
     public float vidaMaxima;
     public float CantidadCuracionItem;
-
-    //public float fillPerClick = 0.2f; 
+    
 
     void Update()
     {
@@ -21,7 +20,7 @@ public class HealthBar : MonoBehaviour
 
     public void RecibirDanoDeEnemigo()
     {
-        vidaActual--;
+        vidaActual-= 5;
     }
 
     

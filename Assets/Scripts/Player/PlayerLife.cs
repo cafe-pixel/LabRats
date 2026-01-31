@@ -24,5 +24,13 @@ public class PlayerLife : MonoBehaviour, IDamagable
         if (lifeCounter == 0) Destroy(gameObject);
     }
 
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            MakeDamage(10, gameObject);
+        }
+    }
+
     
 }
