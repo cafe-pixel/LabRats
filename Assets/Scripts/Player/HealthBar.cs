@@ -1,16 +1,38 @@
 using UnityEngine;
-
+using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public Image Vida;
+    public float vidaActual;
+    public float vidaMaxima;
+    public float CantidadCuracionItem;
 
-    // Update is called once per frame
+    //public float fillPerClick = 0.2f; 
+
     void Update()
     {
-        
+        Vida.fillAmount = vidaActual / vidaMaxima;
+            
+        /*if (vidaActual <= 0)
+        {
+            //SceneManager.LoadScene(2);
+        }*/
+    }
+
+    public void RecibirDanoDeEnemigo()
+    {
+        vidaActual--;
+    }
+
+    
+    //por si le metemos curación
+    public void AumentarVida()
+    {
+        vidaActual += CantidadCuracionItem;
+        if (vidaActual > vidaMaxima)
+        {
+            vidaActual = vidaMaxima;
+        }
     }
 }
+
