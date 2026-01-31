@@ -7,14 +7,16 @@ public class Bullet : MonoBehaviour
     [SerializeField] private float velocity = 7f;
     [SerializeField] private float damage = 2f;
 
+
     public Vector3 dir;
+    
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-
         if (Camera.main != null) rb.linearVelocity = dir * (velocity);
+        
 
         Destroy(gameObject,life);
     }
@@ -26,6 +28,7 @@ public class Bullet : MonoBehaviour
         if (TryGetComponent<IDamagable>(out IDamagable enemy))
         {
             enemy.MakeDamage(damage, this.gameObject);
+            EnemyCounter.instance.AddEnemy();
         }
     }
 }

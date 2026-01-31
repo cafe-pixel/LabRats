@@ -8,6 +8,9 @@ public class WeaponShootPoint : MonoBehaviour
     [SerializeField] private float cooldown = 3.5f;
     [SerializeField] private CameraRotation playerCamera;
 
+
+    
+
     [SerializeField] private int shootKey = 0;
 
     private bool canShoot = true;
