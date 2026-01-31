@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
        
         canJump = true;
+        doubleJump = false;
     }
 
     private void Update()
@@ -55,17 +56,14 @@ public class PlayerMovement : MonoBehaviour
             Jump();
         }
         
-        if (Input.GetKeyDown(jump) && !canJump && doubleJump)
-        {
-            DoubleJump();
-        }
+        
 
     }
 
     private void DoubleJump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        doubleJump = false;
+        doubleJump = false; 
     }
 
     private void FixedUpdate()
@@ -91,9 +89,14 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         Debug.Log("Realizo un salto");
-        canJump = false;
-        doubleJump = true;
+        
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        
+        if (Input.GetKeyDown(jump))
+        {
+            Debug.Log("Quiero hacer un doble ssalto");
+            DoubleJump();
+        }
     }
     
     public void Knockback(Vector3 knockDirection, float damage)
