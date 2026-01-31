@@ -18,6 +18,11 @@ public abstract class EnemyAttack : MonoBehaviour
 
     public void TryAttack()
     {
+        Vector3 lookDir = player.position - transform.position;
+        lookDir.y = 0;
+        transform.rotation = Quaternion.LookRotation(lookDir);
+        
+        
         if (Time.time < lastAttackTime + Cooldown)
             return; //Si el tiempo del juego es menor que el ultimo ataque + el cooldown no permite realizar el ataque
         
