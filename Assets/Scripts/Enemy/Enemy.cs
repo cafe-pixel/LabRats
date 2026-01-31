@@ -118,6 +118,9 @@ public class Enemy : MonoBehaviour, IDamagable
     private void Chase()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.position, velocity * Time.deltaTime);
+        Vector3 lookDir = player.position - transform.position;
+        lookDir.y = 0;
+        transform.rotation = Quaternion.LookRotation(lookDir);
         //esto hay que probarlo en 3d
     }
 
