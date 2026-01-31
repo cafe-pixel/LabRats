@@ -21,6 +21,8 @@ public class WeaponShootPoint : MonoBehaviour
 
     private void Update()
     {
+        if (Time.timeScale == 0) {return;}
+        
         if (Input.GetMouseButtonDown(shootKey) && Time.time >= newShoot && canShoot)
         {
             Shoot();

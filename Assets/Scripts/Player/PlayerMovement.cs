@@ -22,26 +22,26 @@ public class PlayerMovement : MonoBehaviour
     
     //references
     private Rigidbody rb;
+    [SerializeField] private Transform cam;
     
     //states
     private string state = "movement";
     
     //can
-    private bool canJump = false;
+    public bool canJump { get; set; }= false;
+    private bool applyGrav = false;    
     
-    
-    //doble salto
-    [SerializeField] private float doubleJumpTimerMax;
-    private float doubleJumpTimer;
     
     //bool
+    private bool hasDoubleJumped = false;
     private bool canMakeDoubleJump = false;
     private int counterScene;
+    
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        doubleJumpTimer = doubleJumpTimerMax;
+       
         canJump = true;
     }
 
@@ -49,22 +49,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
 
-        if (Input.GetKeyDown(jump)&&canJump)
+        if (Input.GetKeyDown(jump) && canJump)
         {
             Jump();
         }
-        
-        if (doubleJumpTimer > 0 && !canJump && canMakeDoubleJump)
-        {
-            doubleJumpTimer -= Time.deltaTime;
-            if (doubleJumpTimer <= 0)
-            {
-                canJump = false;
-            }
-                
-        }
-        
-        
+
     }
 
     private void FixedUpdate()
@@ -81,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
         z = Input.GetAxisRaw("Vertical");
 
 
-        Vector3 moveDir = transform.right * x + transform.forward * z; //transform hace q mires en cuestion al jugador
+        Vector3 moveDir = cam.transform.right * x + cam.transform.forward * z; //transform hace q mires en cuestion al jugador
         rb.linearVelocity = moveDir * movementForce;
 
 
@@ -89,26 +78,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        rb.AddForce(Vector3.up.normalized*jumpForce, ForceMode.Impulse);
+        Debug.Log("Realizo un salto");
+        canJump = false;
+        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
-
-    private void OnCollisionEnter(Collision other)
-    {
-        if (other.gameObject.CompareTag("Path"))
-        {
-            canJump = true;
-            doubleJumpTimer = doubleJumpTimerMax;
-        }
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.CompareTag("Path"))
-        {
-            canJump = false;
-        }
-    }
-
+    
     public void Knockback(Vector3 knockDirection, float damage)
     {
         rb.isKinematic = false;

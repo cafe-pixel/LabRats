@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
 
     public void RecibirDanoDeEnemigo()
     {
-        vidaActual-= 5;
+        vidaActual-= 1;
     }
 
     
