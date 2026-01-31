@@ -14,7 +14,10 @@ public class WeaponShootPoint : MonoBehaviour
     //necesito una pistola, una bala, un lugar donde instanciarla y luego de ahí darle fuerza
 
 
-    
+    public void NowCanShoot()
+    {
+        canShoot = true;
+    }
 
     private void Update()
     {
