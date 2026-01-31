@@ -18,4 +18,12 @@ public class BulletEnemigo : MonoBehaviour
     {
         transform.position += dir * speed * Time.deltaTime;
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.TryGetComponent<IDamagable>(out IDamagable player) && other.CompareTag("Player"))
+        {
+            player.MakeDamage(damage,this.gameObject);
+        }
+    }
 }
