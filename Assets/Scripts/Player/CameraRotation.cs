@@ -19,9 +19,9 @@ public class CameraRotation : MonoBehaviour
 
     private void Update()
     {
-        float yTo = Mathf.Lerp(transform.position.y, playerBody.position.y, 5*Time.deltaTime);
+        //float yTo = Mathf.Lerp(transform.position.y, playerBody.position.y, 5*Time.deltaTime);
 
-        this.transform.position = new Vector3(playerBody.position.x, yTo, playerBody.position.z);
+        //this.transform.position = new Vector3(playerBody.position.x, yTo, playerBody.position.z);
             
         float mouseX = Input.GetAxisRaw("Mouse X") * mouseSensitivite * Time.deltaTime;
         float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSensitivite * Time.deltaTime;

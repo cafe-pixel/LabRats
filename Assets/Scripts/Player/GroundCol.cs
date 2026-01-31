@@ -8,7 +8,7 @@ public class GroundCol : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Path"))
         {
-            player.canJump = true;
+            //player.canJump = true;
         }
     }
 
@@ -16,7 +16,7 @@ public class GroundCol : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Path"))
         {
-            player.canJump = false;
+            //player.canJump = false;
         }
     }
 }
