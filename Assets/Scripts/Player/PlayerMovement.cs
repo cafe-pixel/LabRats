@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         doubleJumpTimer = doubleJumpTimerMax;
+        canJump = true;
     }
 
     private void Update()
