@@ -7,8 +7,8 @@ public class Enemy : MonoBehaviour, IDamagable
 
     [SerializeField] private int lifeCounter;
     //rangos de vision
-    public float ChaseRange { get; }
-    public float AttackRange { get; }
+    protected virtual float ChaseRange { get; }
+    protected virtual float AttackRange { get; }
     [SerializeField] private LayerMask playerLayer; //poner el jugador en la layer del jugador
    
     //referencias
@@ -42,6 +42,9 @@ public class Enemy : MonoBehaviour, IDamagable
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, ChaseRange);
+        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, AttackRange);
     }
 
     private void Update() //update ejecuta cada frame, NO USAR WHILE
