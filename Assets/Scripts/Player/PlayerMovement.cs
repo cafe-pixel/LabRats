@@ -28,10 +28,16 @@ public class PlayerMovement : MonoBehaviour
     
     //can
     private bool canJump = false;
+    
+    
+    //doble salto
+    [SerializeField] private float doubleJumpTimerMax;
+    private float doubleJumpTimer;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
+        doubleJumpTimer = doubleJumpTimerMax;
     }
 
     private void Update()
@@ -42,7 +48,16 @@ public class PlayerMovement : MonoBehaviour
         {
             Jump();
         }
-
+        
+        if (doubleJumpTimer > 0 && !canJump)
+        {
+            doubleJumpTimer -= Time.deltaTime;
+            if (doubleJumpTimer <= 0)
+            {
+                canJump = false;
+            }
+                
+        }
         
         
     }
@@ -77,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.gameObject.CompareTag("Path"))
         {
             canJump = true;
+            doubleJumpTimer = doubleJumpTimerMax;
         }
     }
 
