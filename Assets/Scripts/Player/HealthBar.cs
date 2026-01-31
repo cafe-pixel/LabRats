@@ -2,25 +2,15 @@ using UnityEngine;
 using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
-    public Image Vida;
-    public float vidaActual;
-    public float vidaMaxima;
+    [SerializeField] private Image Vida;
+    private float vidaActual;
+    private float vidaMaxima;
     public float CantidadCuracionItem;
     
-
-    void Update()
+    public void UpdatearVida(float vidaActual, float vidaMaxima)
     {
         Vida.fillAmount = vidaActual / vidaMaxima;
-            
-        /*if (vidaActual <= 0)
-        {
-            //SceneManager.LoadScene(2);
-        }*/
-    }
-
-    public void RecibirDanoDeEnemigo()
-    {
-        vidaActual-= 5;
+        Debug.Log("VIDAUPDATEADA");
     }
 
     
@@ -32,6 +22,9 @@ public class HealthBar : MonoBehaviour
         {
             vidaActual = vidaMaxima;
         }
+        
+        Vida.fillAmount = vidaActual / vidaMaxima;
+        Debug.Log("A");
     }
 }
 

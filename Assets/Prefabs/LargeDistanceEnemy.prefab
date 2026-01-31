@@ -44,8 +44,8 @@ GameObject:
   - component: {fileID: 1641246234055714113}
   - component: {fileID: 8146856814195655250}
   - component: {fileID: 8069170392744542123}
-  - component: {fileID: 4737235333616945368}
   - component: {fileID: 7635860206516445845}
+  - component: {fileID: 842557502492007058}
   m_Layer: 0
   m_Name: LargeDistanceEnemy
   m_TagString: Enemy
@@ -175,24 +175,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
---- !u!114 &4737235333616945368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2156612362440914351}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d7afd6da6da95b458b68cf9054eedc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  lifeCounter: 10
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  enemyAttack: {fileID: 7635860206516445845}
-  velocity: 5
 --- !u!114 &7635860206516445845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,3 +194,23 @@ MonoBehaviour:
   firePoint: {fileID: 2931177165885525264}
   bulletDirection: {x: 1, y: 0, z: 1}
   vidaMaxima: 20
+--- !u!114 &842557502492007058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2156612362440914351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66fa36274ef8d9a4c8bd2c8801d737b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LargeDistanceEnemy
+  lifeCounter: 3
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  enemyAttack: {fileID: 7635860206516445845}
+  velocity: 4.46
+  chaseRange: 9.79
+  attackRange: 6.38
