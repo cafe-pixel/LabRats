@@ -4,7 +4,7 @@ public class BulletEnemigo : MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private float life = 3f;
-    [SerializeField] private float damage = 2f;
+    [SerializeField] private float damage = 1f;
 
 
     public Vector3 dir;
@@ -24,6 +24,7 @@ public class BulletEnemigo : MonoBehaviour
         if (other.TryGetComponent<IDamagable>(out IDamagable player) && other.CompareTag("Player"))
         {
             player.MakeDamage(damage,this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

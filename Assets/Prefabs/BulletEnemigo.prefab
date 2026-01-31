@@ -50,7 +50,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BulletEnemigo
   speed: 10
   life: 3
-  damage: 10
+  damage: 1
   dir: {x: 0, y: 0, z: 0}
 --- !u!33 &7906835946368986182
 MeshFilter:
