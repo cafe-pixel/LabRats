@@ -857,7 +857,8 @@ MonoBehaviour:
   jump: 32
   movementForce: 10
   gravity: 20
-  jumpForce: 5
+  jumpForce: 25
+  doubleJumpTimerMax: 12
 --- !u!114 &5659183398872584247
 MonoBehaviour:
   m_ObjectHideFlags: 0
