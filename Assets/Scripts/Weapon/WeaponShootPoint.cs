@@ -7,8 +7,8 @@ public class WeaponShootPoint : MonoBehaviour
     [SerializeField] private float newShoot = 0f;
     [SerializeField] private float cooldown = 3.5f;
     [SerializeField] private CameraRotation playerCamera;
-
-
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioBullet;
     
 
     [SerializeField] private int shootKey = 0;
@@ -30,6 +30,11 @@ public class WeaponShootPoint : MonoBehaviour
         {
             Shoot();
             newShoot = cooldown + Time.time;
+            if (audioSource != null && audioBullet != null)
+            {
+                audioSource.PlayOneShot(audioBullet);
+                Debug.Log("Sonido Bala");
+            }
         }
 
         //Quaternion rot = this.transform.rotation;

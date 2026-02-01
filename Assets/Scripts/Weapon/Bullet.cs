@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         if (Camera.main != null) rb.linearVelocity = dir * (velocity);
         
+        
 
         Destroy(gameObject,life);
     }

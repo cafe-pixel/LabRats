@@ -11,6 +11,10 @@ public class PlayerLife : MonoBehaviour, IDamagable
     public HealthBar healthBarScript;
     public GameObject GameOverCanvas;
     public GameObject GamePauseCanvas;
+    
+    //sonidos
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioHurt;
 
     private void Awake()
     {
@@ -22,6 +26,7 @@ public class PlayerLife : MonoBehaviour, IDamagable
     public void MakeDamage(float damage, GameObject damagedealer)
     {
         lifeCounter -= damage;
+        audioSource.PlayOneShot(audioHurt);
         healthBarScript.UpdatearVida(lifeCounter, lifeCounterMax);
         Vector3 knockDirection = this.transform.position - damagedealer.transform.position;
         move.Knockback(knockDirection,damage);
