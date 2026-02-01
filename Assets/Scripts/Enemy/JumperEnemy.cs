@@ -13,11 +13,11 @@ public class JumperEnemy : Enemy
     protected override float ChaseRange => chaseRange;
     protected override float AttackRange => attackRange;
     
-    [SerializeField] private float jumpForce;
+    [SerializeField] public float jumpForce;
     
     //sonidos
-    [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip audioJump;
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] public AudioClip audioJump;
     
     
     protected override void Start()
@@ -27,6 +27,7 @@ public class JumperEnemy : Enemy
         isMoving = true;
         canJump = true;
         //realizar un salto
+        
         
         StartCoroutine(EnemyJump());
     }
