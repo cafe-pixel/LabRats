@@ -169,21 +169,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8129411405565248012}
     m_Modifications:
+    - target: {fileID: 2463012923786255310, guid: 07a6b2296d55d1f4ca0916a9c4e0e8b6, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2801427380441959467, guid: 07a6b2296d55d1f4ca0916a9c4e0e8b6, type: 3}
       propertyPath: m_Name
       value: HotSpotAudio
       objectReference: {fileID: 0}
     - target: {fileID: 3887731261664890901, guid: 07a6b2296d55d1f4ca0916a9c4e0e8b6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.9945679
+      value: 1.203
       objectReference: {fileID: 0}
     - target: {fileID: 3887731261664890901, guid: 07a6b2296d55d1f4ca0916a9c4e0e8b6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.596
       objectReference: {fileID: 0}
     - target: {fileID: 3887731261664890901, guid: 07a6b2296d55d1f4ca0916a9c4e0e8b6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.35223
+      value: 1.748
       objectReference: {fileID: 0}
     - target: {fileID: 3887731261664890901, guid: 07a6b2296d55d1f4ca0916a9c4e0e8b6, type: 3}
       propertyPath: m_LocalRotation.w

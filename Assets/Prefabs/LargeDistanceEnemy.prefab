@@ -243,8 +243,8 @@ MonoBehaviour:
     m_Bits: 64
   enemyAttack: {fileID: 7635860206516445845}
   velocity: 100
-  chaseRange: 27.1
-  attackRange: 7.69
+  chaseRange: 9.52
+  attackRange: 7.43
 --- !u!65 &6269774958375759811
 BoxCollider:
   m_ObjectHideFlags: 0
