@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8940571733780832592}
   - component: {fileID: 3194186735578486795}
   - component: {fileID: 9136253517952105859}
+  - component: {fileID: 2136186828060961163}
   m_Layer: 0
   m_Name: mesh
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 179449669380885577}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: 0.679, z: 0}
+  m_LocalPosition: {x: 0, y: 0.817, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -112,6 +113,28 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -16206050752638424, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
+--- !u!95 &2136186828060961163
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179449669380885577}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
+  m_Controller: {fileID: 9100000, guid: 20fb94ab790066340a9ee280c2cc3172, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7131973244362552371
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +187,7 @@ MonoBehaviour:
   damage: 3.52
   lastAttackTime: 2.04
   velocity: 3.22
+  jumperEnemy: {fileID: 5796261826189531076}
 --- !u!114 &5796261826189531076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,10 +207,11 @@ MonoBehaviour:
   enemyAttack: {fileID: 6965104835868659502}
   velocity: 13.08
   chaseRange: 10
-  attackRange: 5
+  attackRange: 2.41
   jumpForce: 10
   audioSource: {fileID: 0}
   audioJump: {fileID: 0}
+  audioHeart: {fileID: 0}
 --- !u!54 &8034734299709163879
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -233,8 +258,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.4173625, y: 0.526944, z: 0.20552106}
-  m_Center: {x: 0.045055635, y: 0.27435493, z: 0.03617938}
+  m_Size: {x: 0.4173625, y: 0.56706434, z: 0.20552108}
+  m_Center: {x: 0.045055635, y: 0.29441512, z: 0.03617938}
 --- !u!95 &846924392641401156
 Animator:
   serializedVersion: 7
@@ -244,8 +269,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7131973244362552371}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
+  m_Controller: {fileID: 9100000, guid: 20fb94ab790066340a9ee280c2cc3172, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

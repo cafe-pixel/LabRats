@@ -303,11 +303,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
---- !u!95 &435371728 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 846924392641401156, guid: ac40b7fffd001954598c9988976ebc37, type: 3}
-  m_PrefabInstance: {fileID: 634178143}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &463349883
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,18 +430,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 846924392641401156, guid: ac40b7fffd001954598c9988976ebc37, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 05a84dd2e427d984b976c5ee322e660a, type: 2}
     - target: {fileID: 5796261826189531076, guid: ac40b7fffd001954598c9988976ebc37, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 435371728}
-    - target: {fileID: 6965104835868659502, guid: ac40b7fffd001954598c9988976ebc37, type: 3}
-      propertyPath: jumperEnemy
-      value: 
-      objectReference: {fileID: 5796261826189531076, guid: ac40b7fffd001954598c9988976ebc37, type: 3}
+      propertyPath: attackRange
+      value: 2.41
+      objectReference: {fileID: 0}
     - target: {fileID: 7131973244362552371, guid: ac40b7fffd001954598c9988976ebc37, type: 3}
       propertyPath: m_Name
       value: JumperEnemy (1)
