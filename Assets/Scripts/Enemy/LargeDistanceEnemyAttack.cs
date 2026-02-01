@@ -22,18 +22,15 @@ public class LargeDistanceEnemyAttack : EnemyAttack
 
     void Start()
     {
-        vidaActual = vidaMaxima;
-        if (player == null)
+        fireTimer = 0f;
+
+        if (!player)
         {
             GameObject p = GameObject.FindGameObjectWithTag("Player");
-            if (p != null)
-                player = p.transform;
+            if (p) player = p.transform;
         }
 
-        if (firePoint == null)
-        {
-            firePoint = transform; 
-        }
+        if (!firePoint) firePoint = transform;
     }
 
     protected override void DoAttack()
@@ -72,10 +69,9 @@ public class LargeDistanceEnemyAttack : EnemyAttack
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.LookRotation(direccion));
         
         
-        BulletEnemigo bulletScript = bullet.GetComponent<BulletEnemigo>();
-        if (bulletScript != null)
+        if (bullet.TryGetComponent(out BulletEnemigo bulletEnemigo))
         {
-            bulletScript.dir = direccion;
+            bulletEnemigo.dir = direccion;
         }
 
         

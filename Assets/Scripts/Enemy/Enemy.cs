@@ -50,8 +50,6 @@ public class Enemy : MonoBehaviour, IDamagable
     private void Update() //update ejecuta cada frame, NO USAR WHILE
     {
 
-        
-
         bool inChase = PlayerInChaseRange();
         bool inAttack = PlayerInAttackRange();
 
@@ -74,12 +72,6 @@ public class Enemy : MonoBehaviour, IDamagable
             case "attack":
 
 
-                attackTimer -= Time.deltaTime;
-
-                if (attackTimer <= 0)
-                {
-                    attackTimer = maxAttackTimer;
-
                     if (inAttack)
                     {
                         enemyAttack.SetTarget(player);
@@ -87,7 +79,7 @@ public class Enemy : MonoBehaviour, IDamagable
                     }
 
                     else state = "chase";
-                }
+                
 
                 break;
         }
