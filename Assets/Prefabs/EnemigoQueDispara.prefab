@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.10672, y: 1.556, z: -9.03264}
-  m_LocalScale: {x: 0.27555755, y: 0.9093915, z: 0.2779235}
+  m_LocalScale: {x: 0.39002416, y: 1.2871528, z: 0.39337292}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6999685076992842491}
@@ -49,9 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61a6a5e2eadc604ab019c2c353a7788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemigo2Disparos
-  detectionRange: 7
-  fireRate: 5
-  bulletPrefab: {fileID: 699467271421972353, guid: 3c54d1c88be34bc43b92444a69448917, type: 3}
+  detectionRange: 4
+  fireRate: 1
+  bulletPrefab: {fileID: 4704762399440161724, guid: 618d4c97379c7194d8b3ad5f2c50fc92, type: 3}
   firePoint: {fileID: 6999685076992842491}
   bulletDirection: {x: 1, y: 0, z: 1}
   audioSource: {fileID: 0}
@@ -161,7 +161,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 94
   m_CollisionDetection: 0
 --- !u!1 &4913807603807010528
 GameObject:
@@ -175,7 +175,7 @@ GameObject:
   m_Layer: 0
   m_Name: Bullet Point
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -188,7 +188,7 @@ Transform:
   m_GameObject: {fileID: 4913807603807010528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.109, z: 0.58}
+  m_LocalPosition: {x: 0, y: 0.109, z: 1.175}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

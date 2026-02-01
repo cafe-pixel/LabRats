@@ -3,7 +3,7 @@ using UnityEngine;
 public abstract class EnemyAttack : MonoBehaviour
 {
     protected abstract float Cooldown { get; }
-
+    
     protected Transform player;
     protected Rigidbody rb;
     

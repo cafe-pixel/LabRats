@@ -3,11 +3,11 @@ using UnityEngine;
 public class LargeDistanceEnemyAttack : EnemyAttack
 {
     
-    public float fireRate = 5f;         
+    [SerializeField] private float fireRate;         
     [Header("Bala")]
     public GameObject bulletPrefab;
     public Transform firePoint;         
-    public Vector3 bulletDirection = Vector3.forward; 
+    
     
     
 
@@ -18,7 +18,7 @@ public class LargeDistanceEnemyAttack : EnemyAttack
     public int vidaMaxima = 20;
     private int vidaActual;
 
-    protected override float Cooldown { get; }
+    protected override float Cooldown => 0;
 
     void Start()
     {
@@ -42,6 +42,7 @@ public class LargeDistanceEnemyAttack : EnemyAttack
 
         if (fireTimer <= 0f)
         {
+            
             Disparar();
             fireTimer = fireRate;
         }
@@ -86,6 +87,7 @@ public class LargeDistanceEnemyAttack : EnemyAttack
         if (other.TryGetComponent<IDamagable>(out IDamagable player) && other.CompareTag("Player"))
         {
             player.MakeDamage(damage,this.gameObject);
+            
         }
     }
 
