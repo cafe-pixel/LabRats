@@ -25,6 +25,8 @@ public class Enemy : MonoBehaviour, IDamagable
     
     private float maxAttackTimer = 1.3f;
     private float attackTimer;
+
+    JumperEnemy jumperEnemyScript;
     
     
     protected virtual void Start()
