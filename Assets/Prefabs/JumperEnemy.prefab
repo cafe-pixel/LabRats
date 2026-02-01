@@ -125,6 +125,7 @@ GameObject:
   - component: {fileID: 5796261826189531076}
   - component: {fileID: 8034734299709163879}
   - component: {fileID: 8338136235986346090}
+  - component: {fileID: 846924392641401156}
   m_Layer: 0
   m_Name: JumperEnemy
   m_TagString: Enemy
@@ -234,3 +235,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4173625, y: 0.526944, z: 0.20552106}
   m_Center: {x: 0.045055635, y: 0.27435493, z: 0.03617938}
+--- !u!95 &846924392641401156
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131973244362552371}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
