@@ -13,7 +13,7 @@ public class WeaponShootPoint : MonoBehaviour
 
     [SerializeField] private int shootKey = 0;
 
-    private bool canShoot = true;
+   [SerializeField] private bool canShoot;
     //necesito una pistola, una bala, un lugar donde instanciarla y luego de ahí darle fuerza
 
 
