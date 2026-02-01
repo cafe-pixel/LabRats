@@ -6,12 +6,11 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private string sceneName;
     [SerializeField] private PlayerMovement playerMovement;
     
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && other.TryGetComponent<PlayerMovement>(out PlayerMovement player))
         {
             SceneManager.LoadScene(sceneName);
-            //player.CounterScene(countersScene);
         }
     }
     
