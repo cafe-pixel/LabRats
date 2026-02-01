@@ -8,10 +8,10 @@ public class SceneLoader : MonoBehaviour
     
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.TryGetComponent<PlayerMovement>(out PlayerMovement player))
         {
             SceneManager.LoadScene(sceneName);
-            playerMovement.CounterScene();
+            //player.CounterScene(countersScene);
         }
     }
     

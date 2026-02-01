@@ -32,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
     private bool doubleJump;
     private bool applyGrav = false;
 
+    [SerializeField] private bool canDoublejump;
+
 
     //bool
     private bool hasDoubleJumped = false;
@@ -62,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             audioSource.PlayOneShot(audioJump);
             canJump = true;
-        }else if(Input.GetKeyDown(jump)&&canJump)
+        }else if(Input.GetKeyDown(jump)&&canJump && canDoublejump)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             audioSource.PlayOneShot(audioJump);
@@ -136,11 +138,17 @@ public class PlayerMovement : MonoBehaviour
         //rb.AddForce(knockDirection * damage, ForceMode.Impulse);
     }
 
-    public void CounterScene()
+    public int CounterScene(int countersScene)
     {
         counterScene++;
-        if (counterScene == 2) canMakeDoubleJump = true;
+        if (counterScene >= 2) canMakeDoubleJump = true;
+        return counterScene;
     }
+
+    // private void CanDoubleJump()
+    // {
+    //     if ()
+    // }
 
     private void OnCollisionEnter(Collision collision)
     {
