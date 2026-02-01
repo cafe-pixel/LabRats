@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f5621f1cbec044f98194e5acce0802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MegaJumpAttack
-  damage: 3.52
+  damage: 1
   lastAttackTime: 2.04
   velocity: 3.22
   jumperEnemy: {fileID: 5796261826189531076}
