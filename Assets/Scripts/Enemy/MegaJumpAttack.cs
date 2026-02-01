@@ -14,6 +14,9 @@ public class MegaJumpAttack : EnemyAttack
     protected override void DoAttack()
     {
         //solo embiste y le aplica un knockback al jugador
+
+        isMoving = true;
+        
         
         Vector3 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = direction * velocity;
@@ -45,5 +48,21 @@ public class MegaJumpAttack : EnemyAttack
             
         }
         
+    }
+    
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Path"))
+        {
+            canJump = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision other)
+    {
+        if (other.gameObject.CompareTag("Path"))
+        {
+            canJump = false;
+        }
     }
 }
