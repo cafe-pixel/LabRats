@@ -38,6 +38,10 @@ public class PlayerMovement : MonoBehaviour
     private bool canMakeDoubleJump = false;
     private int counterScene;
     private bool isJumping;
+    
+    //sounds
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip audioJump;
 
 
     private void Awake()
@@ -56,11 +60,12 @@ public class PlayerMovement : MonoBehaviour
         {
             //Jump();
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            
+            audioSource.PlayOneShot(audioJump);
             canJump = true;
         }else if(Input.GetKeyDown(jump)&&canJump)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            audioSource.PlayOneShot(audioJump);
             canJump = false;
         }
         else

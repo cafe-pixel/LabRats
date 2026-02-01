@@ -13,7 +13,7 @@ public class Enemigo2Disparos : MonoBehaviour
     [Header("Sonidos")]
     public AudioSource audioSource;
     public AudioClip sonidoDisparo;
-    public AudioClip sonidoGolpe;
+   // public AudioClip sonidoGolpe;
 
     [Header("Jugador")]
     public Transform player;
@@ -100,7 +100,7 @@ public class Enemigo2Disparos : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, detectionRange);
     }
     
-    void OnTriggerEnter(Collider collision)       //Función para recibir daño, cambiar etiqueta y parametros
+   /* void OnTriggerEnter(Collider collision)       //Función para recibir daño, cambiar etiqueta y parametros
     {
         if (collision.gameObject.CompareTag("Espada"))  
         {
@@ -112,7 +112,7 @@ public class Enemigo2Disparos : MonoBehaviour
                 Morir();
             }
         }
-    }
+    }*/
 
     void Morir()   //función de morir, añadir animación de muerte
     {
