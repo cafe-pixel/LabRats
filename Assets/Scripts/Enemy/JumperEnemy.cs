@@ -14,6 +14,12 @@ public class JumperEnemy : Enemy
     protected override float AttackRange => attackRange;
     
     [SerializeField] private float jumpForce;
+    
+    //sonidos
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip audioJump;
+    
+    
     protected override void Start()
     {
         base.Start();
@@ -31,9 +37,13 @@ public class JumperEnemy : Enemy
         while (isMoving) 
         {
             yield return new WaitForSeconds(1);
-            
-            
-            if (canJump) rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+
+
+            if (canJump)
+            {
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                audioSource.PlayOneShot(audioJump);
+            }
             
         }
         

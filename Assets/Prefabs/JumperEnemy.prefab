@@ -107,7 +107,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 1
   m_CookingOptions: 30
@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 6965104835868659502}
   - component: {fileID: 5796261826189531076}
   - component: {fileID: 8034734299709163879}
+  - component: {fileID: 8338136235986346090}
   m_Layer: 0
   m_Name: JumperEnemy
   m_TagString: Enemy
@@ -183,6 +184,8 @@ MonoBehaviour:
   chaseRange: 10
   attackRange: 5
   jumpForce: 10
+  audioSource: {fileID: 0}
+  audioJump: {fileID: 0}
 --- !u!54 &8034734299709163879
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -210,3 +213,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!65 &8338136235986346090
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131973244362552371}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4173625, y: 0.526944, z: 0.20552106}
+  m_Center: {x: 0.045055635, y: 0.27435493, z: 0.03617938}
