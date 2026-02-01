@@ -13,6 +13,8 @@ public class ItemHotSpot : MonoBehaviour
     private void Start()
     {
         audiosrc = GetComponent<AudioSource>();
+        box.enabled = false;
+        mesh.enabled = false;
     }
     
     

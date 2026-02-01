@@ -9,8 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: ed855126e7e519c49b60b2ca51ce64f2
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Scenes/Cinematica 1.unity
+    guid: 431afb2bc1e7ce94187c42b3a4adbfd5
+  - enabled: 1
+    path: Assets/Scenes/Escena1.unity
+    guid: f6939325d782e704984064e012c7f3ab
+  - enabled: 1
+    path: Assets/Scenes/Blocking.unity
+    guid: a770d699d3b8c8f45a2e48ddacd8d9ef
+  - enabled: 1
+    path: Assets/Scenes/Escena3.unity
+    guid: 17a18bbe52e06dc4b8c5b72b9d2e08af
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
