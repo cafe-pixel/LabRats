@@ -21,7 +21,7 @@ public class JumperEnemy : Enemy
     [SerializeField] public AudioClip audioHeart;
     
     //anims
-   [SerializeField] private Animator animator;
+   //[SerializeField] private RuntimeAnimatorController animator;
     
     
     protected override void Start()
@@ -35,10 +35,10 @@ public class JumperEnemy : Enemy
         StartCoroutine(EnemyJump());
     }
 
-    private void Attack()
+ /*   private void Attack()
     {
         animator.SetTrigger("Attack");
-    }
+    }*/
 
 
     private IEnumerator EnemyJump()
