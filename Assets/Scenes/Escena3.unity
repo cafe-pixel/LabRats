@@ -8016,6 +8016,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 924538550}
   m_SourcePrefab: {fileID: 100100000, guid: 2e672be74597e094c8ea741e1159e3fe, type: 3}
+--- !u!114 &280146061 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 626407089923051610, guid: c2ef21811cc77974d815d875c607a511, type: 3}
+  m_PrefabInstance: {fileID: 1336756708}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e437177abe7763c4f8d08710a437e08a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
 --- !u!1001 &282205998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49880,6 +49891,87 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1445187300}
   m_SourcePrefab: {fileID: 100100000, guid: d3b371ff27d15d544ad0576ba1ba4745, type: 3}
+--- !u!1001 &1851781953
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -90.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -36.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134690088303661635, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653323568474263605, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_Name
+      value: SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223706141186616129, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: sceneName
+      value: Creditos
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223706141186616129, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 280146061}
+    - target: {fileID: 6052570894103956792, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_Size.y
+      value: 3.8058062
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052570894103956792, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_Size.z
+      value: 5.372673
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052570894103956792, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_Center.y
+      value: 2.7355285
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052570894103956792, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
+      propertyPath: m_Center.z
+      value: -2.1863365
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
 --- !u!1001 &1851825442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58673,3 +58765,4 @@ SceneRoots:
   - {fileID: 1735672279}
   - {fileID: 638428307}
   - {fileID: 1274280616}
+  - {fileID: 1851781953}
