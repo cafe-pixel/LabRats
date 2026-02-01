@@ -124,5 +124,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67c2c05bffe12bc49a5ee128dea2f802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnerEnemy
-  spawnableEnemy: {fileID: 0}
-  enemyCounter: 0
+  spawned: 1
+  spawnableEnemy: {fileID: 7131973244362552371, guid: ac40b7fffd001954598c9988976ebc37, type: 3}
+  enemyCounter: 2
