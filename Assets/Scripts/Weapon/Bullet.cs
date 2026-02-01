@@ -25,7 +25,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (TryGetComponent<IDamagable>(out IDamagable enemy))
+        if (other.TryGetComponent<IDamagable>(out IDamagable enemy))
         {
             enemy.MakeDamage(damage, this.gameObject);
             EnemyCounter.instance.AddEnemy();

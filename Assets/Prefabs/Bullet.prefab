@@ -127,7 +127,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   life: 3
   velocity: 35
-  damage: 2
+  damage: 1
   dir: {x: 0, y: 0, z: 0}
 --- !u!54 &2132972754715956957
 Rigidbody:
