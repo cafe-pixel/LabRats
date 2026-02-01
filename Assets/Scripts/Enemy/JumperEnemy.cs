@@ -18,6 +18,7 @@ public class JumperEnemy : Enemy
     //sonidos
     [SerializeField] public AudioSource audioSource;
     [SerializeField] public AudioClip audioJump;
+    [SerializeField] public AudioClip audioHeart;
     
     
     protected override void Start()
@@ -64,5 +65,10 @@ public class JumperEnemy : Enemy
         {
             canJump = false;
         }
+    }
+
+    public void SonidoHeart()
+    {
+        audioSource.PlayOneShot(audioHeart);
     }
 }
