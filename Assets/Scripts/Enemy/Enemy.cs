@@ -5,7 +5,7 @@ public class Enemy : MonoBehaviour, IDamagable
 {
     //queremos que tenga una vida, que sea atacable y que se mueva
 
-    [SerializeField] private int lifeCounter;
+    [SerializeField] private float lifeCounter;
     //rangos de vision
     protected virtual float ChaseRange { get; }
     protected virtual float AttackRange { get; }
@@ -50,8 +50,6 @@ public class Enemy : MonoBehaviour, IDamagable
     private void Update() //update ejecuta cada frame, NO USAR WHILE
     {
 
-        
-
         bool inChase = PlayerInChaseRange();
         bool inAttack = PlayerInAttackRange();
 
@@ -74,12 +72,6 @@ public class Enemy : MonoBehaviour, IDamagable
             case "attack":
 
 
-                attackTimer -= Time.deltaTime;
-
-                if (attackTimer <= 0)
-                {
-                    attackTimer = maxAttackTimer;
-
                     if (inAttack)
                     {
                         enemyAttack.SetTarget(player);
@@ -87,7 +79,7 @@ public class Enemy : MonoBehaviour, IDamagable
                     }
 
                     else state = "chase";
-                }
+                
 
                 break;
         }
@@ -128,10 +120,10 @@ public class Enemy : MonoBehaviour, IDamagable
     //lo de ser atacable
     public void MakeDamage(float damage, GameObject damagedealer)
     {
-        lifeCounter--;
-        Vector3 knockDirection = this.transform.position - damagedealer.transform.position;
+        lifeCounter -= damage;
+        Vector3 knockDirection = damagedealer.transform.position - this.transform.position;
         Knockback(knockDirection,damage);
-        if (lifeCounter == 0) Destroy(gameObject);
+        if (lifeCounter <= 0) Destroy(gameObject);
     }
 
     private void Knockback(Vector3 knockDirection, float damage)

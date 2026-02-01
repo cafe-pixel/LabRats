@@ -11,6 +11,7 @@ public class BulletEnemigo : MonoBehaviour
 
     void Start()
     {
+        transform.rotation = Quaternion.LookRotation(dir);
         Destroy(gameObject, life);
     }
 
