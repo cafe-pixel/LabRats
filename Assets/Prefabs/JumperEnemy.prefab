@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 179449669380885577}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: 1.442, z: 0}
+  m_LocalPosition: {x: 0, y: 0.679, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -141,7 +141,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.85993, y: 0.3, z: 10.3}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.2537606, y: 2.2537606, z: 2.2537606}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7265454609085549033}
@@ -180,9 +180,9 @@ MonoBehaviour:
     m_Bits: 64
   enemyAttack: {fileID: 6965104835868659502}
   velocity: 13.08
-  chaseRange: 22.05
-  attackRange: 9.3
-  jumpForce: 6.28
+  chaseRange: 10
+  attackRange: 5
+  jumpForce: 10
 --- !u!54 &8034734299709163879
 Rigidbody:
   m_ObjectHideFlags: 0
