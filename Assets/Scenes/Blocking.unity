@@ -12513,16 +12513,16 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4449342587072413329, guid: ebd04925fac140e41aa9ee619c29750d, type: 3}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 389588e (bsz)
-=======
->>>>>>> parent of 207521e (bsz)
-=======
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+
+ parent of 389588e (bsz)
+
+ parent of 207521e (bsz)
+
 --- !u!1001 &264424448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12576,34 +12576,34 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 207521e (bsz)
-=======
->>>>>>> parent of e9a3544 (bsz)
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+
+ parent of 207521e (bsz)
+
+ parent of e9a3544 (bsz)
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8f4069b58b1bbf429380cbec413c519, type: 3}
->>>>>>> parent of 81c7919 (wvc)
-<<<<<<< HEAD
-=======
+ parent of 81c7919 (wvc)
+ HEAD
+
     m_RemovedGameObjects:
     - {fileID: 5327107311698941901, guid: e8f4069b58b1bbf429380cbec413c519, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8f4069b58b1bbf429380cbec413c519, type: 3}
->>>>>>> parent of caa6ef1 (Update Blocking.unity)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1883021 (hjhgyug)
-=======
->>>>>>> parent of 207521e (bsz)
-=======
->>>>>>> parent of 389588e (bsz)
+ parent of caa6ef1 (Update Blocking.unity)
+ HEAD
+
+ parent of 1883021 (hjhgyug)
+
+ parent of 207521e (bsz)
+
+ parent of 389588e (bsz)
 --- !u!1 &264862540 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6650892223823523933, guid: ebd04925fac140e41aa9ee619c29750d, type: 3}
@@ -43337,16 +43337,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of e9a3544 (bsz)
-=======
-=======
->>>>>>> parent of 81c7919 (wvc)
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+
+ parent of e9a3544 (bsz)
+
+
+ parent of 81c7919 (wvc)
     - target: {fileID: 4759182205547106433, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.5
@@ -43423,29 +43423,28 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -16.82
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of e9a3544 (bsz)
-=======
->>>>>>> parent of 389588e (bsz)
->>>>>>> parent of 1883021 (hjhgyug)
-=======
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+ parent of e9a3544 (bsz)
+
+ parent of 389588e (bsz)
+ parent of 1883021 (hjhgyug)
+
     - target: {fileID: 7129262769959942218, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: canShoot
       value: 1
       objectReference: {fileID: 0}
->>>>>>> parent of 81c7919 (wvc)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1883021 (hjhgyug)
-=======
->>>>>>> parent of b9a9f77 (bsz)
-=======
->>>>>>> parent of 389588e (bsz)
+ parent of 81c7919 (wvc)
+ HEAD
+
+ parent of 1883021 (hjhgyug)
+
+ parent of b9a9f77 (bsz)
+
+ parent of 389588e (bsz)
     - target: {fileID: 7953830401975391233, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_Name
       value: NewPlayer
@@ -108201,30 +108200,30 @@ SceneRoots:
   - {fileID: 259459117}
   - {fileID: 1428943157}
   - {fileID: 1730587684}
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of 389588e (bsz)
+ HEAD
+ HEAD
+ HEAD
+ HEAD
+
+ parent of 389588e (bsz)
   - {fileID: 1020977759}
   - {fileID: 1381189862}
   - {fileID: 1620568715}
-=======
->>>>>>> parent of 1883021 (hjhgyug)
-<<<<<<< HEAD
-=======
+
+ parent of 1883021 (hjhgyug)
+ HEAD
+
   - {fileID: 264424448}
->>>>>>> parent of caa6ef1 (Update Blocking.unity)
-<<<<<<< HEAD
-=======
->>>>>>> parent of 1883021 (hjhgyug)
-=======
+ parent of caa6ef1 (Update Blocking.unity)
+ HEAD
+
+ parent of 1883021 (hjhgyug)
+
   - {fileID: 1020977759}
   - {fileID: 1381189862}
   - {fileID: 1620568715}
->>>>>>> parent of b9a9f77 (bsz)
-=======
->>>>>>> parent of 207521e (bsz)
-=======
->>>>>>> parent of 389588e (bsz)
+ parent of b9a9f77 (bsz)
+
+ parent of 207521e (bsz)
+
+ parent of 389588e (bsz)
