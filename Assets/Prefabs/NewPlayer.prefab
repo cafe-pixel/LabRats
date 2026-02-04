@@ -655,10 +655,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4759182205547106433}
+  - component: {fileID: 7129262769959942218}
   - component: {fileID: 402725303912281539}
   - component: {fileID: 1978969166317884623}
   - component: {fileID: 8094449359082987434}
-  - component: {fileID: 7129262769959942218}
   m_Layer: 6
   m_Name: Weapon
   m_TagString: Weapon
@@ -682,6 +682,27 @@ Transform:
   - {fileID: 5238889074514663407}
   m_Father: {fileID: 8626014311395227448}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &7129262769959942218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4004696275985753085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5162bdaed179acf49a9661e3654940d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponShootPoint
+  bullet: {fileID: 4704762399440161724, guid: b16820c8d84ad7e4b9daa8e053668762, type: 3}
+  shootPoint: {fileID: 5238889074514663407}
+  newShoot: 0
+  cooldown: 1
+  playerCamera: {fileID: 4867161550982476840}
+  audioSource: {fileID: 3528881895808086967}
+  audioBullet: {fileID: 8300000, guid: 5c7685190bd398745a437dff885f5b3d, type: 3}
+  shootKey: 0
+  canShoot: 0
 --- !u!33 &402725303912281539
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -760,27 +781,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7129262769959942218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4004696275985753085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5162bdaed179acf49a9661e3654940d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WeaponShootPoint
-  bullet: {fileID: 4704762399440161724, guid: b16820c8d84ad7e4b9daa8e053668762, type: 3}
-  shootPoint: {fileID: 5238889074514663407}
-  newShoot: 0
-  cooldown: 1
-  playerCamera: {fileID: 4867161550982476840}
-  audioSource: {fileID: 3528881895808086967}
-  audioBullet: {fileID: 8300000, guid: 5c7685190bd398745a437dff885f5b3d, type: 3}
-  shootKey: 0
-  canShoot: 0
 --- !u!1 &4211167845820217923
 GameObject:
   m_ObjectHideFlags: 0

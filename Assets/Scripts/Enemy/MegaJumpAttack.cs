@@ -6,11 +6,12 @@ public class MegaJumpAttack : EnemyAttack
 {
     protected override float Cooldown { get; }
     [SerializeField] private float velocity;
-    [SerializeField] private JumperEnemy jumperEnemy;
+    [SerializeField] private JumperEnemy jumperEnemyScript;
     
     private bool isMoving;
     
     private bool canJump;
+    
     protected override void DoAttack()
     {
         //solo embiste y le aplica un knockback al jugador
@@ -20,7 +21,7 @@ public class MegaJumpAttack : EnemyAttack
         
         Vector3 direction = (player.position - transform.position).normalized;
         rb.linearVelocity = direction * velocity;
-        StartCoroutine(EnemyJump());
+        //StartCoroutine(EnemyJump());
         
     }
     
@@ -42,8 +43,8 @@ public class MegaJumpAttack : EnemyAttack
 
             if (canJump)
             {
-                rb.AddForce(Vector3.up * jumperEnemy.jumpForce, ForceMode.Impulse);
-                jumperEnemy.audioSource.PlayOneShot(jumperEnemy.audioJump);
+                rb.AddForce(Vector3.up * jumperEnemyScript.jumpForce, ForceMode.Impulse);
+                jumperEnemyScript.audioSource.PlayOneShot(jumperEnemyScript.audioJump);
             }
             
         }
