@@ -25,8 +25,12 @@ public class Enemy : MonoBehaviour, IDamagable
     
     private float maxAttackTimer = 1.3f;
     private float attackTimer;
-
-    JumperEnemy jumperEnemyScript;
+    
+    //sonidos
+    [SerializeField] public AudioSource audioSource;
+    [SerializeField] public AudioClip audioJump;
+    [SerializeField] public AudioClip audioHeart;
+    
     
     
     protected virtual void Start()
@@ -123,6 +127,7 @@ public class Enemy : MonoBehaviour, IDamagable
     public void MakeDamage(float damage, GameObject damagedealer)
     {
         lifeCounter -= damage;
+        audioSource.PlayOneShot(audioHeart);
         Vector3 knockDirection = damagedealer.transform.position - this.transform.position;
         Knockback(knockDirection,damage);
         if (lifeCounter <= 0) Destroy(gameObject);

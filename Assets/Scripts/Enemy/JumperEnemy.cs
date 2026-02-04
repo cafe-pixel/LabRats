@@ -15,10 +15,6 @@ public class JumperEnemy : Enemy
     
     [SerializeField] public float jumpForce;
     
-    //sonidos
-    [SerializeField] public AudioSource audioSource;
-    [SerializeField] public AudioClip audioJump;
-    [SerializeField] public AudioClip audioHeart;
     
     //anims
    //[SerializeField] private RuntimeAnimatorController animator;
@@ -73,9 +69,6 @@ public class JumperEnemy : Enemy
             canJump = false;
         }
     }
-
-    public void SonidoHeart()
-    {
-        audioSource.PlayOneShot(audioHeart);
-    }
+    
+    
 }

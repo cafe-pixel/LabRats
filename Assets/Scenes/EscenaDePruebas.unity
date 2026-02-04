@@ -119,49 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &173200177 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5339786711553300426, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
+--- !u!82 &173200178 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4272197256344681283, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
   m_PrefabInstance: {fileID: 1822287410}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &173200182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173200177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66fa36274ef8d9a4c8bd2c8801d737b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LargeDistanceEnemy
-  lifeCounter: 3
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  enemyAttack: {fileID: 173200183}
-  velocity: 100
-  chaseRange: 9.52
-  attackRange: 7.43
---- !u!114 &173200183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 173200177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51f42270535c0954e82df3eb65733e49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::LargeDistanceEnemyAttack
-  damage: 3
-  lastAttackTime: 0
-  fireRate: 5
-  bulletPrefab: {fileID: 4704762399440161724, guid: 618d4c97379c7194d8b3ad5f2c50fc92, type: 3}
-  firePoint: {fileID: 0}
-  vidaMaxima: 1
 --- !u!1 &185513249
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,22 +835,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anim_LargeDistanceEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 8448410322857193357, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
-      propertyPath: enemyAttack
+    - target: {fileID: 5599580946218529296, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
+      propertyPath: audioHeart
       value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5728891398574059166, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
-    - {fileID: 8448410322857193357, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
+      objectReference: {fileID: 8300000, guid: 87706c8b33d0b1c46b451134b6a7463c, type: 3}
+    - target: {fileID: 5599580946218529296, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 173200178}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5339786711553300426, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 173200183}
-    - targetCorrespondingSourceObject: {fileID: 5339786711553300426, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 173200182}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
 --- !u!1001 &1883424440
 PrefabInstance:
@@ -998,6 +956,10 @@ PrefabInstance:
     - target: {fileID: 5339786711553300426, guid: 48d55b0bc2df92a4dadd0ff396931850, type: 3}
       propertyPath: m_Name
       value: Anim_JumperEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8448410322857193357, guid: 48d55b0bc2df92a4dadd0ff396931850, type: 3}
+      propertyPath: attackRange
+      value: 1.9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

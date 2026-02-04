@@ -115,12 +115,12 @@ MonoBehaviour:
     m_Bits: 64
   enemyAttack: {fileID: 5728891398574059166}
   velocity: 10
-  chaseRange: 10
-  attackRange: 1.42
-  jumpForce: 3
   audioSource: {fileID: 4272197256344681283}
   audioJump: {fileID: 0}
   audioHeart: {fileID: 8300000, guid: 419bc83f9117a5b4b8dbcffe64f6aab8, type: 3}
+  chaseRange: 10
+  attackRange: 1.9
+  jumpForce: 3
 --- !u!54 &4027992458758882746
 Rigidbody:
   m_ObjectHideFlags: 0
