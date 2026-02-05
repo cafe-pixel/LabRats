@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.06
+      value: -811.19836
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.179
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20.61
+      value: 18.772577
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anim_JumperEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_Controller
       value: 
@@ -75,6 +79,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4272197256344681283}
+    - targetCorrespondingSourceObject: {fileID: -8556373833288841516, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8389580534129615004}
   m_SourcePrefab: {fileID: 100100000, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
 --- !u!1 &5339786711553300426 stripped
 GameObject:
@@ -96,7 +103,7 @@ MonoBehaviour:
   damage: 1
   lastAttackTime: 1.35
   velocity: 3.76
-  jumperEnemyScript: {fileID: 0}
+  jumperEnemyScript: {fileID: 8448410322857193357}
 --- !u!114 &8448410322857193357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +125,7 @@ MonoBehaviour:
   audioSource: {fileID: 4272197256344681283}
   audioJump: {fileID: 0}
   audioHeart: {fileID: 8300000, guid: 419bc83f9117a5b4b8dbcffe64f6aab8, type: 3}
-  chaseRange: 10
+  chaseRange: 2.75
   attackRange: 1.9
   jumpForce: 3
 --- !u!54 &4027992458758882746
@@ -163,12 +170,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.76223826, y: 1.513226, z: 0.3433527}
-  m_Center: {x: -0.01144731, y: -0.17866576, z: 0.10509519}
+  m_Size: {x: 0.76223826, y: 1.9402994, z: 0.75605774}
+  m_Center: {x: -0.01144731, y: 0.034870923, z: 0.1381607}
 --- !u!82 &4272197256344681283
 AudioSource:
   m_ObjectHideFlags: 0
@@ -266,3 +273,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &5736025984275999823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8556373833288841516, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
+  m_PrefabInstance: {fileID: 5105905950472104603}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &8389580534129615004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5736025984275999823}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.7951508, y: 0.27010354, z: 0.9395991}
+  m_Center: {x: 0.043846786, y: -0.09364645, z: -0.40869796}
