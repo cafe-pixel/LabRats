@@ -47,12 +47,14 @@ public class WeaponShootPoint : MonoBehaviour
         {
             Bullet b = Instantiate(bullet, shootPoint.position, playerCamera.transform.rotation).GetComponent<Bullet>();
             b.dir = playerCamera.transform.forward;
+            Debug.Log("Disparo aleatoriamente");
         }
         else
         {
             
             Bullet b = Instantiate(bullet, shootPoint.position, playerCamera.transform.rotation).GetComponent<Bullet>();
             b.dir = (playerCamera.lookPoint - shootPoint.position).normalized;
+            Debug.Log("Disparo al enemigo");
         }
         
     }

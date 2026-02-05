@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        if (Camera.main != null) rb.linearVelocity = dir * (velocity);
+        rb.linearVelocity = dir * (velocity);
         
         
 
@@ -26,10 +26,13 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent<IDamagable>(out IDamagable enemy))
+        if (other.TryGetComponent<IDamagable>(out IDamagable enemy)&&other.CompareTag("Enemy"))
         {
             enemy.MakeDamage(damage, this.gameObject);
+            Debug.Log("He pegadoo un enemigo");
             EnemyCounter.instance.AddEnemy();
+            Destroy(gameObject);
         }
     }
+    
 }

@@ -91,6 +91,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!135 &3352383192051427722
 SphereCollider:
@@ -127,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   life: 3
   velocity: 35
-  damage: 1
+  damage: 3
   dir: {x: 0, y: 0, z: 0}
 --- !u!54 &2132972754715956957
 Rigidbody:
