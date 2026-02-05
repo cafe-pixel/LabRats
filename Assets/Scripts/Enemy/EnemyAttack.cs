@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public abstract class EnemyAttack : MonoBehaviour
+public class EnemyAttack : MonoBehaviour
 {
-    protected abstract float Cooldown { get; }
+    protected float Cooldown { get; }
     
     protected Transform player;
     protected Rigidbody rb;
@@ -37,6 +37,9 @@ public abstract class EnemyAttack : MonoBehaviour
         player = target;
     }
 
-    protected abstract void DoAttack();
+    protected virtual void DoAttack()
+    {
+        //NO TOCAR
+    }
 }
 
