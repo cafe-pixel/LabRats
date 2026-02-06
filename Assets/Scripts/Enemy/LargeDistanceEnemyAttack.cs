@@ -6,19 +6,9 @@ public class LargeDistanceEnemyAttack : EnemyAttack
     [SerializeField] private float fireRate;         
     [Header("Bala")]
     public GameObject bulletPrefab;
-    public Transform firePoint;         
-    
-    
-    
-
-
+    public Transform firePoint;        
     private float fireTimer = 0f;
     
-    
-    public int vidaMaxima = 20;
-    private int vidaActual;
-
-    protected override float Cooldown => 0;
 
     void Start()
     {

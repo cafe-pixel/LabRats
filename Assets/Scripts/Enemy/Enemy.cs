@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Enemy : MonoBehaviour, IDamagable
 {
@@ -12,19 +13,19 @@ public class Enemy : MonoBehaviour, IDamagable
     [SerializeField] private LayerMask playerLayer; //poner el jugador en la layer del jugador
    
     //referencias
-    private Transform player;
+    protected Transform player;
     protected Rigidbody rb;
-    [SerializeField] private EnemyAttack enemyAttack;
+    [SerializeField] protected EnemyAttack enemyAttack;
     
     
     //states
-    private string state = "chase";
+    protected string state = "chase";
 
-    [SerializeField] private float velocity;
-    
-    
-    private float maxAttackTimer = 1.3f;
-    private float attackTimer;
+    [SerializeField] protected float velocity;
+
+
+    protected float maxAttackTimer = 1.3f;
+    protected float attackTimer;
     
     //sonidos
     [SerializeField] public AudioSource audioSource;
@@ -53,7 +54,7 @@ public class Enemy : MonoBehaviour, IDamagable
         Gizmos.DrawWireSphere(transform.position, AttackRange);
     }
 
-    private void Update() //update ejecuta cada frame, NO USAR WHILE
+    protected virtual void Update() //update ejecuta cada frame, NO USAR WHILE
     {
 
         bool inChase = PlayerInChaseRange();
@@ -91,7 +92,7 @@ public class Enemy : MonoBehaviour, IDamagable
         }
     }
 
-    private bool PlayerInChaseRange()
+    protected bool PlayerInChaseRange()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, ChaseRange, playerLayer); 
         if (colliders.Length > 0) //si el array de colliders es mayor que cero porque el overlapSphere detecta colision en una posicion dentro del radio y de la layer indicada
@@ -104,19 +105,20 @@ public class Enemy : MonoBehaviour, IDamagable
         return false;
     }
     
-    private bool PlayerInAttackRange()
+    protected bool PlayerInAttackRange()
     {
         Collider[] colliders = Physics.OverlapSphere(transform.position, AttackRange, playerLayer);
         if (colliders.Length > 0)
         {
+            Debug.Log("He tomado al player");
             player =  colliders[0].transform;
             return true;
         }
       
         return false;
     }
-    
-    private void Chase()
+
+    protected void Chase()
     {
         transform.position = Vector3.MoveTowards(transform.position, player.position, velocity * Time.deltaTime);
         

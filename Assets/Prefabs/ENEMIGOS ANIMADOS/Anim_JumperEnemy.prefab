@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -811.19836
+      value: -785.2417
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.772577
+      value: 23.680386
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,9 +66,6 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       insertIndex: 1
-      addedObject: {fileID: 5728891398574059166}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
-      insertIndex: 2
       addedObject: {fileID: 8448410322857193357}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       insertIndex: -1
@@ -79,6 +76,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4272197256344681283}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3641050648966435619}
     - targetCorrespondingSourceObject: {fileID: -8556373833288841516, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8389580534129615004}
@@ -88,22 +88,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
   m_PrefabInstance: {fileID: 5105905950472104603}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5728891398574059166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5339786711553300426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f5621f1cbec044f98194e5acce0802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MegaJumpAttack
-  damage: 1
-  lastAttackTime: 1.35
-  velocity: 3.76
-  jumperEnemyScript: {fileID: 8448410322857193357}
 --- !u!114 &8448410322857193357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,14 +104,15 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  enemyAttack: {fileID: 5728891398574059166}
-  velocity: 10
+  enemyAttack: {fileID: 3641050648966435619}
+  velocity: 2
   audioSource: {fileID: 4272197256344681283}
   audioJump: {fileID: 0}
   audioHeart: {fileID: 8300000, guid: 419bc83f9117a5b4b8dbcffe64f6aab8, type: 3}
-  chaseRange: 2.75
-  attackRange: 1.9
-  jumpForce: 3
+  chaseRange: 19.95
+  attackRange: 6.36
+  jumpForce: 8
+  damage: 1
 --- !u!54 &4027992458758882746
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -273,6 +258,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3641050648966435619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5339786711553300426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecc3b1381d06a84f8983082507c6e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  damage: 3
+  lastAttackTime: 0
 --- !u!1 &5736025984275999823 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8556373833288841516, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
