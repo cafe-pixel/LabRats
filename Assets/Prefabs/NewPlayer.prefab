@@ -735,7 +735,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: ad60b5995cebf1848ae1094afbff5b3e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -951,7 +951,6 @@ GameObject:
   - component: {fileID: 6478216027348299146}
   - component: {fileID: 626407089923051610}
   - component: {fileID: 1141755475947242178}
-  - component: {fileID: 6848970837714125195}
   - component: {fileID: 5747870203408409879}
   - component: {fileID: 2697780898512049619}
   - component: {fileID: 7116227174086653691}
@@ -974,9 +973,9 @@ Transform:
   m_GameObject: {fileID: 5509185967681390817}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.099999, y: -0.24216986, z: -0.6843612}
+  m_LocalPosition: {x: -1.099999, y: 0.94, z: -0.6843612}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8626014311395227448}
   - {fileID: 1130433471243146550}
@@ -1022,14 +1021,6 @@ MonoBehaviour:
   GamePauseCanvas: {fileID: 9015007663268528450}
   audioSource: {fileID: 3528881895808086967}
   audioHurt: {fileID: 8300000, guid: 4ea4d18dbc31aa740b34a145205cfd7d, type: 3}
---- !u!33 &6848970837714125195
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5509185967681390817}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &5747870203408409879
 MeshRenderer:
   m_ObjectHideFlags: 0
