@@ -3,20 +3,29 @@ using UnityEngine;
 public class OpenDoorTrigger : MonoBehaviour
 {
     public OpenDoor openDoorScript;
+    [SerializeField] private int nEnemies;
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN))
         {
-            openDoorScript.PlayerInTrigger();
+            if (other.CompareTag("Player") && enemyN.enemyCounter == nEnemies)
+            {
+                openDoorScript.PlayerInTrigger();
+            }
         }
+        
     }
 
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN))
         {
-            openDoorScript.PlayerOutTrigger();
+            if (other.CompareTag("Player") && enemyN.enemyCounter == nEnemies)
+            {
+                openDoorScript.PlayerOutTrigger();
+                enemyN.enemyCounter = 0;
+            }
         }
     }
 }
