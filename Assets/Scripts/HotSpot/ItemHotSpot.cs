@@ -6,7 +6,6 @@ public class ItemHotSpot : MonoBehaviour
     //Se comunica con ataque de player
     [SerializeField] private MeshRenderer mesh;
     [SerializeField] private BoxCollider box;
-    public bool canOpenDoorInTrigger;
     private AudioSource audiosrc;
     
     
@@ -14,6 +13,7 @@ public class ItemHotSpot : MonoBehaviour
     {
         audiosrc = GetComponent<AudioSource>();
         box.enabled = false;
+        Debug.Log("Comienzo con los elementos apagados");
         mesh.enabled = false;
     }
     
@@ -24,8 +24,9 @@ public class ItemHotSpot : MonoBehaviour
         {
             player.NowCanShoot();
             mesh.enabled = true;
+            Debug.Log("Enciendo los elementos");
             box.enabled = true;
-            canOpenDoorInTrigger = true;
+            player.NowCanOpenFirstDoor();
             audiosrc.Play();
             
         }

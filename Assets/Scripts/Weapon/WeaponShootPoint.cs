@@ -9,17 +9,26 @@ public class WeaponShootPoint : MonoBehaviour
     [SerializeField] private CameraRotation playerCamera;
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip audioBullet;
+
+    public bool canOpenDoor = false;
+    
+    
     
 
     [SerializeField] private int shootKey = 0;
 
-   [SerializeField] private bool canShoot;
+   [SerializeField] public bool canShoot;
     //necesito una pistola, una bala, un lugar donde instanciarla y luego de ahí darle fuerza
 
 
     public void NowCanShoot()
     {
         canShoot = true;
+    }
+    
+    public void NowCanOpenFirstDoor()
+    {
+        canOpenDoor = true;
     }
 
     private void Update()

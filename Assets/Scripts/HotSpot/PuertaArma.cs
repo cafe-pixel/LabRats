@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class PuertaArma : MonoBehaviour
 {
-
-    [SerializeField] private ItemHotSpot itemHotSpot;
     private bool openDoor = false;
 
     [SerializeField] private Transform door;
@@ -16,10 +14,16 @@ public class PuertaArma : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN)&&itemHotSpot.canOpenDoorInTrigger)
+        if (other.TryGetComponent<WeaponShootPoint>(out WeaponShootPoint weapon))
         {
-            openDoor = true;
-            DoorInitialMovement();
+            Debug.Log("no puedo abrirme peor pillo el trigger");
+            if (weapon.canOpenDoor)
+            {
+                openDoor = true;
+                DoorInitialMovement();
+                Debug.Log("Me abro");
+            }
+            
         
         }
     }
@@ -28,13 +32,16 @@ public class PuertaArma : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN) && itemHotSpot.canOpenDoorInTrigger)
+        if (other.TryGetComponent<WeaponShootPoint>(out WeaponShootPoint weapon))
         {
-            
+            if (weapon.canOpenDoor)
+            {
                 openDoor = false;
 
            
                 door.position = initialPoint.position;
+            }
+            
             
         }
     }

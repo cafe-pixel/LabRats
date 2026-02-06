@@ -3,12 +3,13 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] private int nEnemies;
     [SerializeField] private string sceneName;
     [SerializeField] private PlayerMovement playerMovement;
     
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && other.TryGetComponent<PlayerMovement>(out PlayerMovement player))
+        if (other.CompareTag("Player") && other.TryGetComponent<PlayerMovement>(out PlayerMovement player) && nEnemies == EnemyCounter.instance.enemyCounter)
         {
             SceneManager.LoadScene(sceneName);
         }
