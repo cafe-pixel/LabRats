@@ -41,15 +41,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -809.43896
+      value: -786.6147
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1
+      value: 1.47
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22.6681
+      value: 26.704142
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 8a0c74a5050b94f4498834ae920dfb0e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -144,7 +144,6 @@ MonoBehaviour:
   fireRate: 5
   bulletPrefab: {fileID: 4704762399440161724, guid: 618d4c97379c7194d8b3ad5f2c50fc92, type: 3}
   firePoint: {fileID: 6857257431584330728}
-  vidaMaxima: 1
 --- !u!114 &5599580946218529296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -162,12 +161,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   enemyAttack: {fileID: 1600206740162052974}
-  velocity: 100
+  velocity: 10
   audioSource: {fileID: 4272197256344681283}
   audioJump: {fileID: 0}
   audioHeart: {fileID: 8300000, guid: 419bc83f9117a5b4b8dbcffe64f6aab8, type: 3}
   chaseRange: 9.52
-  attackRange: 7.43
+  attackRange: 6.34
 --- !u!54 &4027992458758882746
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -421,10 +421,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Anim_LargeDistanceEnemy
       objectReference: {fileID: 0}
-    - target: {fileID: 5599580946218529296, guid: 10e1e4fe8064f004aa5c1c4c83a7c924, type: 3}
-      propertyPath: attackRange
-      value: 6.34
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -462,6 +458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d1e6c98fa46d824c8831cca8dd657dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  nEnemies: 0
   sceneName: 
   playerMovement: {fileID: 194838489}
 --- !u!65 &1733622158
@@ -646,7 +643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3717431600070447424, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -786.8
+      value: -805.4
       objectReference: {fileID: 0}
     - target: {fileID: 3717431600070447424, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_LocalPosition.y
