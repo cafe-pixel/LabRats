@@ -52,6 +52,7 @@ public class PlayerLife : MonoBehaviour, IDamagable
     public void GiveYouLife(float life)
     {
         lifeCounter += life;
+        healthBarScript.UpdatearVida(lifeCounter, lifeCounterMax);
         if (lifeCounter > lifeCounterMax) lifeCounter = lifeCounterMax;
     }
 

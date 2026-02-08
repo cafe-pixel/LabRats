@@ -21,7 +21,7 @@ public class OpenDoorTrigger : MonoBehaviour
     {
         if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN))
         {
-            if (other.CompareTag("Player") && enemyN.enemyCounter == nEnemies)
+            if (other.CompareTag("Player") && enemyN.enemyCounter >= nEnemies)
             {
                 openDoorScript.PlayerOutTrigger();
                 enemyN.enemyCounter = 0;
