@@ -9,20 +9,23 @@ public class SpawnerVidaDependienteEnemigos : MonoBehaviour
     [Tooltip("BichitoTonto")][SerializeField] private BoxCollider boxMesh;
     [Tooltip("BichitoTonto")][SerializeField] private MeshRenderer mesh;
     
-    
-    
-    private AudioSource audiosrc;
+   
 
 
     private void Start()
     {
-        audiosrc = GetComponent<AudioSource>();
+        
         //empieza con el trigger apagado, este se enciende cuando nEnemies es correcto
         mesh.enabled = false;
         boxMesh.enabled = false;
     }
 
     private void Update()
+    {
+        
+    }
+
+    private void OnTriggerStay(Collider other)
     {
         if (nEnemies == EnemyCounter.instance.enemyCounter)
         {
@@ -31,10 +34,6 @@ public class SpawnerVidaDependienteEnemigos : MonoBehaviour
             boxMesh.enabled = true;
             
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        audiosrc.Play();
+        
     }
 }
