@@ -9,11 +9,13 @@ public class DestroyGameObject : MonoBehaviour
     [SerializeField] private TextMeshProUGUI mirilla;
     
     
+    
     private void OnTriggerEnter(Collider other)
     {
         shoot.canShoot = true;
         meshWeapon.enabled = true;
         mirilla.enabled = true;
+        
         Destroy(gameObject);
     }
 }

@@ -7,6 +7,7 @@ public class ItemHotSpot : MonoBehaviour
     [SerializeField] private MeshRenderer mesh;
     [SerializeField] private BoxCollider box;
     private AudioSource audiosrc;
+    [SerializeField] private Light light;
     
     
     private void Start()
@@ -15,6 +16,7 @@ public class ItemHotSpot : MonoBehaviour
         box.enabled = false;
         Debug.Log("Comienzo con los elementos apagados");
         mesh.enabled = false;
+        light.enabled = false;
     }
     
     
@@ -26,6 +28,7 @@ public class ItemHotSpot : MonoBehaviour
             mesh.enabled = true;
             Debug.Log("Enciendo los elementos");
             box.enabled = true;
+            light.enabled = true;
             player.NowCanOpenFirstDoor();
             audiosrc.Play();
             
