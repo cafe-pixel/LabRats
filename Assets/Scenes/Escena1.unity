@@ -37451,6 +37451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 626407089923051610, guid: c2ef21811cc77974d815d875c607a511, type: 3}
+      propertyPath: movementForce
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1978969166317884623, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -37494,6 +37498,10 @@ PrefabInstance:
     - target: {fileID: 3717431600070447424, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478216027348299146, guid: c2ef21811cc77974d815d875c607a511, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.44
       objectReference: {fileID: 0}
     - target: {fileID: 7129262769959942218, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: canShoot
@@ -38705,7 +38713,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 325054481788624983, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1116921183034415527, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_LocalPosition.x

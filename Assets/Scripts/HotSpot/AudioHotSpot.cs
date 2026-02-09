@@ -8,6 +8,8 @@ public class AudioHotSpot : MonoBehaviour
   public AudioSource audiosrc;
   public AudioClip audioclip;
 
+  [SerializeField] private Light pLight;
+
   [SerializeField] private PlayerMovement move;
 
   [SerializeField] private float lifeToGive;
@@ -45,7 +47,11 @@ public class AudioHotSpot : MonoBehaviour
   private IEnumerator DestruirObjeto()
   {
     yield return new WaitForSeconds(audiosrc.clip.length);
+    pLight.enabled = false;
     move.enabled = true;
+    var spawner = GetComponentInParent<SpawnerVidaDependienteEnemigos>();
+    if (spawner != null)
+      spawner.enabled = false;
     Destroy(gameObject);
   }
 }

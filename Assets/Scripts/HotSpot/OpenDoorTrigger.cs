@@ -9,7 +9,7 @@ public class OpenDoorTrigger : MonoBehaviour
     {
         if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN))
         {
-            if (other.CompareTag("Player") && enemyN.enemyCounter == nEnemies)
+            if (other.CompareTag("Player") && enemyN.enemyCounter >= nEnemies)
             {
                 openDoorScript.PlayerInTrigger();
             }
@@ -25,6 +25,8 @@ public class OpenDoorTrigger : MonoBehaviour
             {
                 openDoorScript.PlayerOutTrigger();
                 enemyN.enemyCounter = 0;
+                
+                Debug.Log("La vida del player es " + enemyN.enemyCounter);
             }
         }
     }
