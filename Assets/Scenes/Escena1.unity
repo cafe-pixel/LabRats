@@ -39655,23 +39655,23 @@ PrefabInstance:
       objectReference: {fileID: 172210004}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Size.x
-      value: 1.012336
+      value: 1.0318103
       objectReference: {fileID: 0}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Size.y
-      value: 1.6853404
+      value: 2.3256598
       objectReference: {fileID: 0}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Center.x
-      value: 0.006168301
+      value: 0.015905451
       objectReference: {fileID: 0}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Center.y
-      value: 0.3426702
+      value: 0.022510588
       objectReference: {fileID: 0}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Center.z
-      value: -5.5225013e-17
+      value: 8.463765e-18
       objectReference: {fileID: 0}
     - target: {fileID: 3639718216659609134, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: MaxDistance

@@ -53663,6 +53663,18 @@ PrefabInstance:
       propertyPath: nEnemies
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Size.x
+      value: 0.30179533
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Center.x
+      value: 0.23954056
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Center.z
+      value: 0.0449458
+      objectReference: {fileID: 0}
     - target: {fileID: 9144986705560720873, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
       propertyPath: m_Name
       value: NewDoor (8)
@@ -69748,6 +69760,30 @@ PrefabInstance:
     - target: {fileID: 6650401375717474476, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Size.x
+      value: 0.19011721
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0881233
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Center.x
+      value: 0.1837015
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Center.y
+      value: 0.04406166
+      objectReference: {fileID: 0}
+    - target: {fileID: 7680347329560539824, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
+      propertyPath: m_Center.z
+      value: 0.044945866
       objectReference: {fileID: 0}
     - target: {fileID: 9144986705560720873, guid: 6bae7617117ff6647b685f80f065dbcf, type: 3}
       propertyPath: m_Name
