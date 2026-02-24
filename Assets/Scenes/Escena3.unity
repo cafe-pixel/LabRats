@@ -50387,7 +50387,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5223706141186616129, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
       propertyPath: sceneName
-      value: Creditos
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 5223706141186616129, guid: 165cf8a28f3b9c14b8d34883aba961cc, type: 3}
       propertyPath: playerMovement
