@@ -35526,7 +35526,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 626407089923051610, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: movementForce
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1978969166317884623, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
