@@ -38368,7 +38368,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 626407089923051610, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: movementForce
-      value: 0.1
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1978969166317884623, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_Enabled
@@ -39655,7 +39655,7 @@ PrefabInstance:
       objectReference: {fileID: 172210004}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Size.x
-      value: 1.012336
+      value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Size.y
@@ -39663,7 +39663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Center.x
-      value: 0.006168301
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3610543520204104156, guid: 430cc13b02933094ea1de97e4460ac87, type: 3}
       propertyPath: m_Center.y
