@@ -135,7 +135,7 @@ public class Enemy : MonoBehaviour, IDamagable
         
         Vector3 knockDirection = damagedealer.transform.position - this.transform.position;
         Knockback(knockDirection,damage);
-        if (lifeCounter <= 0) Destroy(gameObject,0.5);
+        if (lifeCounter <= 0) Destroy(gameObject,0.13f);
     }
 
     private void Knockback(Vector3 knockDirection, float damage)
