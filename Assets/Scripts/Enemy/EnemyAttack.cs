@@ -18,6 +18,7 @@ public class EnemyAttack : MonoBehaviour
 
     public void TryAttack()
     {
+        
         Vector3 lookDir = player.position - transform.position;
         lookDir.y = 0;
         transform.rotation = Quaternion.LookRotation(lookDir);

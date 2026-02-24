@@ -38399,6 +38399,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 626407089923051610, guid: c2ef21811cc77974d815d875c607a511, type: 3}
+      propertyPath: audioWalk
+      value: 
+      objectReference: {fileID: 8300000, guid: b006e480162a433488db1df0ef4c3cc9, type: 3}
+    - target: {fileID: 626407089923051610, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: movementForce
       value: 1
       objectReference: {fileID: 0}
@@ -38448,7 +38452,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867161550982476840, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: mouseSensitivite
-      value: 360
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6478216027348299146, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_LocalPosition.y

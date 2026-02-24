@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -44,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
     //sounds
     [SerializeField] AudioSource audioSource;
     [SerializeField] AudioClip audioJump;
+    [SerializeField] private AudioClip audioWalk;
 
 
     private void Awake()
@@ -117,9 +120,21 @@ public class PlayerMovement : MonoBehaviour
             cam.transform.right * x + Vector3.ProjectOnPlane(cam.transform.forward * z,Vector3.up); //transform hace q mires en cuestion al jugador
         rb.linearVelocity += moveDir * movementForce;
 
+       /* if (Mathf.Abs(x) > 0 || Mathf.Abs(z) > 0)
+        {
+            StartCoroutine(AudioWalk());
+        }
+        */
+
 
     }
-
+/*
+    private IEnumerator AudioWalk()
+    {
+        audioSource.PlayOneShot(audioWalk);
+        yield return new WaitForSeconds(0.02f);
+    }
+*/
     private void Jump()
     {
         Debug.Log("Realizo un salto");

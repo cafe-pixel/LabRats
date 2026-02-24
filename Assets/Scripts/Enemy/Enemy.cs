@@ -79,7 +79,7 @@ public class Enemy : MonoBehaviour, IDamagable
             case "attack":
 
 
-                    if (inAttack)
+                    if (inAttack && enemyAttack!=null)
                     {
                         enemyAttack.SetTarget(player);
                         enemyAttack.TryAttack();

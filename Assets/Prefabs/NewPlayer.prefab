@@ -1011,7 +1011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ae1650ddd4f2a47a0ed8764e5ddebe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraRotation
-  mouseSensitivite: 100
+  mouseSensitivite: 360
   playerBody: {fileID: 6478216027348299146}
 --- !u!1 &5509185967681390817
 GameObject:

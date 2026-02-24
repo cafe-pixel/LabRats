@@ -36679,7 +36679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4867161550982476840, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: mouseSensitivite
-      value: 360
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 6478216027348299146, guid: c2ef21811cc77974d815d875c607a511, type: 3}
       propertyPath: m_LocalPosition.x

@@ -3,13 +3,13 @@ using UnityEngine;
 public class OpenDoorTrigger : MonoBehaviour
 {
     public OpenDoor openDoorScript;
-    [SerializeField] private int nEnemies;
+    
 
     void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN))
         {
-            if (other.CompareTag("Player") && enemyN.enemyCounter >= nEnemies)
+            if (other.CompareTag("Player"))
             {
                 openDoorScript.PlayerInTrigger();
             }
@@ -21,10 +21,10 @@ public class OpenDoorTrigger : MonoBehaviour
     {
         if (other.TryGetComponent<EnemyCounter>(out EnemyCounter enemyN))
         {
-            if (other.CompareTag("Player") && enemyN.enemyCounter >= nEnemies)
+            if (other.CompareTag("Player"))
             {
                 openDoorScript.PlayerOutTrigger();
-                enemyN.enemyCounter = 0;
+                
                 
                 Debug.Log("La vida del player es " + enemyN.enemyCounter);
             }
