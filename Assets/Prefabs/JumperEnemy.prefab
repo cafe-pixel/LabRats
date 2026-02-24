@@ -90,6 +90,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &9136253517952105859
 MeshCollider:
@@ -144,11 +145,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412454945464005040}
-  - component: {fileID: 6965104835868659502}
   - component: {fileID: 5796261826189531076}
+  - component: {fileID: 2558023324832581503}
   - component: {fileID: 8034734299709163879}
   - component: {fileID: 8338136235986346090}
   - component: {fileID: 846924392641401156}
+  - component: {fileID: 3245281613739761173}
   m_Layer: 0
   m_Name: JumperEnemy
   m_TagString: Enemy
@@ -172,22 +174,6 @@ Transform:
   - {fileID: 7265454609085549033}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6965104835868659502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7131973244362552371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7f5621f1cbec044f98194e5acce0802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MegaJumpAttack
-  damage: 1
-  lastAttackTime: 2.04
-  velocity: 3.22
-  jumperEnemy: {fileID: 5796261826189531076}
 --- !u!114 &5796261826189531076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,14 +190,29 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 64
-  enemyAttack: {fileID: 6965104835868659502}
+  enemyAttack: {fileID: 2558023324832581503}
   velocity: 13.08
+  audioSource: {fileID: 3245281613739761173}
+  audioJump: {fileID: 8300000, guid: 814ad62e22da6634dbe2ae3bf7fe0969, type: 3}
+  audioHeart: {fileID: 8300000, guid: 13214804d8e75334ea4a8709fc97b354, type: 3}
   chaseRange: 10
   attackRange: 2.41
   jumpForce: 10
-  audioSource: {fileID: 0}
-  audioJump: {fileID: 0}
-  audioHeart: {fileID: 0}
+  damage: 0
+--- !u!114 &2558023324832581503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131973244362552371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ecc3b1381d06a84f8983082507c6e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
+  damage: 2
+  lastAttackTime: 0
 --- !u!54 &8034734299709163879
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -282,3 +283,100 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &3245281613739761173
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131973244362552371}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

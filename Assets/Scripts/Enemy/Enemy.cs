@@ -128,11 +128,12 @@ public class Enemy : MonoBehaviour, IDamagable
     //lo de ser atacable
     public void MakeDamage(float damage, GameObject damagedealer)
     {
-        lifeCounter -= damage;
         audioSource.PlayOneShot(audioHeart);
+        lifeCounter -= damage;
+        
         Vector3 knockDirection = damagedealer.transform.position - this.transform.position;
         Knockback(knockDirection,damage);
-        if (lifeCounter <= 0) Destroy(gameObject);
+        if (lifeCounter <= 0) Destroy(gameObject,0.2f);
     }
 
     private void Knockback(Vector3 knockDirection, float damage)
